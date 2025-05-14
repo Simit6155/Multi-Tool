@@ -1,0 +1,9 @@
+Python - latest version if possible
+
+type this into your terminal to install the rest of the requierements
+
+pip install socket
+pip install webbrowser
+pip install colorama
+pip install requests
+pip install pyautogui
