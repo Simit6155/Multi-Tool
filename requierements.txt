@@ -1,5 +1,3 @@
-socket
-webbrowser
 colorama
 requests
 pyautogui
