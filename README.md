@@ -30,7 +30,7 @@ q: Exit the program.
 ## Disclaimer
 This tool is intended for ethical and educational purposes only. Misuse of the spam bot or other features could cause harm or disrupt services. Always make sure you have permission before using any of the tools.
 
-## Please Note that this is finished problems might occur
+## Please Note that this isn't finished problems might occur
 
 
 
