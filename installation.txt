@@ -1,0 +1,8 @@
+Installation
+Clone the repository:
+
+git clone https://github.com/Simit6155/redsimit-multitool.git Install the required libraries:
+
+pip install -r requirements.txt Run the tool:
+
+python redsimit_tool.py
