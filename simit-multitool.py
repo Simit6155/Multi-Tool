@@ -125,55 +125,55 @@ enter command: """)
 
         try:
             socket.create_connection((ip, ports[0]), timeout=3)
-            print(Fore.GREEN + f"Port {0} open ")
+            print(Fore.GREEN + f"Port {ports[0]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[0]} closed ")
 
         try:
             socket.create_connection((ip, ports[1]), timeout=3)
-            print(Fore.GREEN + f"Port {1} open ")
+            print(Fore.GREEN + f"Port {ports[1]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[1]} closed ")
 
         try:
             socket.create_connection((ip, ports[2]), timeout=3)
-            print(Fore.GREEN + f"Port {2} open ")
+            print(Fore.GREEN + f"Port {ports[2]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[2]} closed ")
 
         try:
             socket.create_connection((ip, ports[3]), timeout=3)
-            print(Fore.GREEN + f"Port {3} open ")
+            print(Fore.GREEN + f"Port {ports[3]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[3]} closed ")
 
         try:
             socket.create_connection((ip, ports[4]), timeout=3)
-            print(Fore.GREEN + f"Port {4} open ")
+            print(Fore.GREEN + f"Port {ports[4]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[4]} closed ")
 
         try:
             socket.create_connection((ip, ports[5]), timeout=3)
-            print(Fore.GREEN + f"Port {5} open ")
+            print(Fore.GREEN + f"Port {ports[5]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[5]} closed ")
 
         try:
             socket.create_connection((ip, ports[6]), timeout=3)
-            print(Fore.GREEN + f"Port {6} open ")
+            print(Fore.GREEN + f"Port {ports[6]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[6]} closed ")
 
         try:
             socket.create_connection((ip, ports[7]), timeout=3)
-            print(Fore.GREEN + f"Port {7} open ")
+            print(Fore.GREEN + f"Port {ports[7]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[7]} closed ")
 
         try:
             socket.create_connection((ip, ports[8]), timeout=3)
-            print(Fore.GREEN + f"Port {8} open ")
+            print(Fore.GREEN + f"Port {ports[8]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[8]} closed ")
 
@@ -185,7 +185,7 @@ enter command: """)
 
         try:
             socket.create_connection((ip, ports[10]), timeout=3)
-            print(Fore.GREEN + f"Port {10} open ")
+            print(Fore.GREEN + f"Port {ports[10]} open ")
         except socket.error:
             print(Fore.GREEN + f"Port {ports[10]} closed ")
 
