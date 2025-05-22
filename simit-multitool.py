@@ -1,70 +1,28 @@
-import time
-import socket
-import pyautogui
-import requests
-import webbrowser
-import colorama
-from colorama import Fore, init
-import subprocess
-import os
-
-init(autoreset=True)
-
-
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BIG CODE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-def track_ip(ip):
-    print(Fore.RED + "GEOLOCATER MADE BY @REDSIMIT")
-    url = f"https://ipapi.co/{ip}/json/"
-    response = requests.get(url)
-    data = response.json()
-
-    network = data.get("network")
-    version = data.get("version")
-    city = data.get("city")
-    country = data.get("country")
-    country_name = data.get("country_name")
-    country_code = data.get("country_code")
-    postal = data.get("postal")
-    timezone = data.get("timezone")
-    asn = data.get("asn")
-    languages = data.get("languages")
-    country_capital = data.get("country_capital")
-    country_area = data.get("country_area")
-
-    longitude = data.get("longitude")
-    latitude = data.get("latitude")
-
-    print(Fore.GREEN + "Network: " + network)
-    print(Fore.GREEN + "Version: " + version)
-    print(Fore.GREEN + "City: " + city)
-    print(Fore.GREEN + "Country: " + country)
-    print(Fore.GREEN + "Country_name: " + country_name)
-    print(Fore.GREEN + "Country_code: " + country_code)
-    print(Fore.GREEN + "Country_capital: " + country_capital)
-    print(Fore.GREEN + "Postal Code: " + postal)
-    print(Fore.GREEN + "Timezone: " + timezone)
-    print(Fore.GREEN + "ASN: " + asn)
-    print(Fore.GREEN + "Languages: " + languages)
-    print(Fore.GREEN + "Country_area: " + str(country_area))
-
-    print(Fore.GREEN + "Longitude: " + str(longitude))
-    print(Fore.GREEN + "Latitude: " + str(latitude))
-    print(Fore.GREEN + f"https://www.google.com/maps?q={latitude},{longitude}")
-    webbrowser.open(f"https://www.google.com/maps?q={latitude},{longitude}")
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // IMPORTS // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import time                                                                                                          #||
+import socket                                                                                                        #||
+import pyautogui                                                                                                     #||
+import requests                                                                                                      #||
+import webbrowser                                                                                                    #||
+import colorama                                                                                                      #||
+from colorama import Fore, init                                                                                      #||
+import subprocess                                                                                                    #||
+import os                                                                                                            #||
+                                                                                                                     #||
+init(autoreset=True)                                                                                                 #||
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // INTRO // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 command = ""
 while command != "q":
     def redsimit():
-        print(Fore.RED + "█████      ████████     ██████      █████   ███    ██         ██    ███    ███████")
-        print(Fore.RED + "█    █     ██           █     █    █         █     █ █       █ █     █        █")
-        print(Fore.RED + "█    █     ██           █     █    █         █     █  █     █  █     █        █")
-        print(Fore.RED + "█████      ████████     █     █      █████   █     █   █   █   █     █        █")
-        print(Fore.RED + "█   █      ██           █    █           █   █     █    █ █    █     █        █")
-        print(Fore.RED + "█    █     ██           █   █            █   █     █    ███    █     █        █")
-        print(Fore.RED + "█     █    ████████     ████         █████  ███    █           █    ███       █")
-        print(Fore.RED + "Made by @redsimit ")
+        print(Fore.RED + "      █████      ████████     ██████      █████   ███    ██         ██    ███    ███████")
+        print(Fore.RED + "      █    █     ██           █     █    █         █     █ █       █ █     █        █")
+        print(Fore.RED + "      █    █     ██           █     █    █         █     █  █     █  █     █        █")
+        print(Fore.RED + "      █████      ████████     █     █      █████   █     █   █   █   █     █        █")
+        print(Fore.RED + "      █   █      ██           █    █           █   █     █    █ █    █     █        █")
+        print(Fore.RED + "      █    █     ██           █   █            █   █     █    ███    █     █        █")
+        print(Fore.RED + "      █     █    ████████     ████         █████  ███    █           █    ███       █")
+        print(Fore.RED + "                               Made by @redsimit ")
 
 
     redsimit()
@@ -75,7 +33,9 @@ q = quit
 
 ~~~~~~~~ Networking ~~~~~~~~~~~~~
 geo = opens geolocator
-port = opens open port tester
+m port = opens a multi port scanner
+s port = opens a single port scanner
+osint = opens a tool for osint --- linux only
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~ Attacking ~~~~~~~~~~~~~~
@@ -83,22 +43,64 @@ spam = opens a spammbot
 rat = opens a remote access trojan (reverse shell) --- linux only :(
 fish = opens a phishing website maker --- linux only :(
 cam = opens a cam hacking tool --- linux only :(
+~~~~~~~~~ Other popular Multi-Tools ~~~~~~~~~
+alhack = opens albanian hacking tool --- linux only :(
 ///////////////////////////////////////
 
 enter command: """)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // MAIN // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     if question == "geo":
         ip = input(Fore.GREEN + "Enter IP Address: ")
-        track_ip(ip)
+        print(Fore.RED + "GEOLOCATER MADE BY @REDSIMIT")
+        url = f"https://ipapi.co/{ip}/json/"
+        response = requests.get(url)
+        data = response.json()
+
+        network = data.get("network")
+        version = data.get("version")
+        city = data.get("city")
+        country = data.get("country")
+        country_name = data.get("country_name")
+        country_code = data.get("country_code")
+        postal = data.get("postal")
+        timezone = data.get("timezone")
+        asn = data.get("asn")
+        languages = data.get("languages")
+        country_capital = data.get("country_capital")
+        country_area = data.get("country_area")
+
+        longitude = data.get("longitude")
+        latitude = data.get("latitude")
+
+        print(Fore.GREEN + "Network: " + network)
+        print(Fore.GREEN + "Version: " + version)
+        print(Fore.GREEN + "City: " + city)
+        print(Fore.GREEN + "Country: " + country)
+        print(Fore.GREEN + "Country_name: " + country_name)
+        print(Fore.GREEN + "Country_code: " + country_code)
+        print(Fore.GREEN + "Country_capital: " + country_capital)
+        print(Fore.GREEN + "Postal Code: " + postal)
+        print(Fore.GREEN + "Timezone: " + timezone)
+        print(Fore.GREEN + "ASN: " + asn)
+        print(Fore.GREEN + "Languages: " + languages)
+        print(Fore.GREEN + "Country_area: " + str(country_area))
+
+        print(Fore.GREEN + "Longitude: " + str(longitude))
+        print(Fore.GREEN + "Latitude: " + str(latitude))
+        print(Fore.GREEN + f"https://www.google.com/maps?q={latitude},{longitude}")
+        webbrowser.open(f"https://www.google.com/maps?q={latitude},{longitude}")
+
 
     elif question == "q":
         print(Fore.GREEN + "closing program...")
         time.sleep(1)
         break
 
-    elif question == "port":
+    elif question == "s port":
         print(Fore.RED + "THIS PORT TESTER WAS MADE BY @REDSIMIT")
-        ip = input(Fore.GREEN + "Input the following ip adress: ")
+        ip = "127.0.0.1"
         port = int(input(Fore.GREEN + "Input the following port: "))
         time.sleep(1)
         print(Fore.LIGHTGREEN_EX + "Connecting...")
@@ -109,6 +111,83 @@ enter command: """)
             print(Fore.GREEN + "port is open")
         except socket.error:
             print(Fore.GREEN + "port is closed")
+
+    elif question == "m port":
+        import socket
+        import colorama
+        from colorama import Fore, init
+
+        init(autoreset=True)
+
+        print(Fore.RED + "This Multi-Port tester was made by @Redsimit ")
+        ip = "127.0.0.1"
+        ports = [4444, 22, 8080, 443, 21, 22, 23, 25, 53, 80, 31337]
+
+        try:
+            socket.create_connection((ip, ports[0]), timeout=3)
+            print(Fore.GREEN + f"Port {0} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[0]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[1]), timeout=3)
+            print(Fore.GREEN + f"Port {1} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[1]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[2]), timeout=3)
+            print(Fore.GREEN + f"Port {2} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[2]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[3]), timeout=3)
+            print(Fore.GREEN + f"Port {3} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[3]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[4]), timeout=3)
+            print(Fore.GREEN + f"Port {4} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[4]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[5]), timeout=3)
+            print(Fore.GREEN + f"Port {5} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[5]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[6]), timeout=3)
+            print(Fore.GREEN + f"Port {6} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[6]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[7]), timeout=3)
+            print(Fore.GREEN + f"Port {7} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[7]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[8]), timeout=3)
+            print(Fore.GREEN + f"Port {8} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[8]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[9]), timeout=3)
+            print(Fore.GREEN + f"Port {ports[9]} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[9]} closed ")
+
+        try:
+            socket.create_connection((ip, ports[10]), timeout=3)
+            print(Fore.GREEN + f"Port {10} open ")
+        except socket.error:
+            print(Fore.GREEN + f"Port {ports[10]} closed ")
 
     elif question == "spam":
         print(Fore.GREEN + "BECAREFULL USING THIS BOT IT MIGHT CRASH THE VICTIMS DEVICE!! ")
@@ -154,3 +233,14 @@ enter command: """)
         subprocess.run(mod_cam)
         start_cam = ["./CamPhish.sh"]
         subprocess.run(start_cam)
+
+    elif question == "osint":
+        start_sherlock = ["sherlock" , "-h"]
+        subprocess.run(start_sherlock)
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // ERROR HANDLING // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    else:
+        print(Fore.RED + "Unknown command... ")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
