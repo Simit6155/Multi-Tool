@@ -12,18 +12,17 @@ import os                                                                       
 init(autoreset=True)                                                                                                 #||
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // INTRO // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 command = ""
 while command != "q":
     def redsimit():
-        print(Fore.RED + "      █████      ████████     ██████      █████   ███    ██         ██    ███    ███████")
-        print(Fore.RED + "      █    █     ██           █     █    █         █     █ █       █ █     █        █")
-        print(Fore.RED + "      █    █     ██           █     █    █         █     █  █     █  █     █        █")
-        print(Fore.RED + "      █████      ████████     █     █      █████   █     █   █   █   █     █        █")
-        print(Fore.RED + "      █   █      ██           █    █           █   █     █    █ █    █     █        █")
-        print(Fore.RED + "      █    █     ██           █   █            █   █     █    ███    █     █        █")
-        print(Fore.RED + "      █     █    ████████     ████         █████  ███    █           █    ███       █")
+        print(Fore.RED + "           ██████╗ ███████╗██████╗ ███████╗██╗███╗   ███╗██╗████████╗")
+        print(Fore.RED + "           ██╔══██╗██╔════╝██╔══██╗██╔════╝██║████╗ ████║██║╚══██╔══╝")
+        print(Fore.RED + "           ██████╔╝█████╗  ██║  ██║███████╗██║██╔████╔██║██║   ██║   ")
+        print(Fore.RED + "           ██╔══██╗██╔══╝  ██║  ██║╚════██║██║██║╚██╔╝██║██║   ██║   ")
+        print(Fore.RED + "           ██║  ██║███████╗██████╔╝███████║██║██║ ╚═╝ ██║██║   ██║   ")
+        print(Fore.RED + "           ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ")
         print(Fore.RED + "                               Made by @redsimit ")
-
 
     redsimit()
 
@@ -31,48 +30,44 @@ while command != "q":
 Avaible commands:
 q = quit
 
-~~~~~~~~ Networking ~~~~~~~~~~~~~
-geo = opens geolocator
-m port = opens a multi port scanner
-s port = opens a single port scanner
-osint = opens a tool for osint --- linux only
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~ Attacking ~~~~~~~~~~~~~~
-spam = opens a spammbot
-rat = opens a remote access trojan (reverse shell) --- linux only :(
-fish = opens a phishing website maker --- linux only :(
-cam = opens a cam hacking tool --- linux only :(
-~~~~~~~~~ Other popular Multi-Tools ~~~~~~~~~
-alhack = opens albanian hacking tool --- linux only :(
+~~~~~~~~ Networking ~~~~~~~~~~~~~                                        
+geo = opens geolocator                                              ~~~~~~~~~~ Attacking ~~~~~~~~~~~           
+m port = opens a multi port scanner                                       spam = opens spambot    
+s port = opens a single port scanner                                      rat = opens a reverse shell // linux only
+osint = opens a tool for osint --- linux only                             fish = opens a phishing tool // linux only
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                         cam = opens a cam hacking tool // linux only
+~~~~~~~~~ Other popular Multi-Tools ~~~~~~~~~                       ~~~~~~~~~~~ Support me ~~~~~~~~~~~~~~
+alhack = opens albanian hacking tool --- linux only :(                  support = opens my social media accounts
 ///////////////////////////////////////
 
 enter command: """)
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // MAIN // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     if question == "geo":
         ip = input(Fore.GREEN + "Enter IP Address: ")
         print(Fore.RED + "GEOLOCATER MADE BY @REDSIMIT")
         url = f"https://ipapi.co/{ip}/json/"
-        response = requests.get(url)
+        response = requests.get(url , timeout = 5)
         data = response.json()
 
-        network = data.get("network")
-        version = data.get("version")
-        city = data.get("city")
-        country = data.get("country")
-        country_name = data.get("country_name")
-        country_code = data.get("country_code")
-        postal = data.get("postal")
-        timezone = data.get("timezone")
-        asn = data.get("asn")
-        languages = data.get("languages")
-        country_capital = data.get("country_capital")
-        country_area = data.get("country_area")
+        network = data.get("network" , "Unknown")
+        version = data.get("version" , "Unknown")
+        city = data.get("city" , "Unknown")
+        country = data.get("country" , "Unknown")
+        country_name = data.get("country_name" , "Unknown")
+        country_code = data.get("country_code" , "Unknown")
+        postal = data.get("postal" , "Unknown")
+        timezone = data.get("timezone" , "Unknown")
+        asn = data.get("asn" , "Unknown")
+        languages = data.get("languages" , "Unknown")
+        country_capital = data.get("country_capital" , "Unknown")
+        country_area = data.get("country_area" , "Unknown")
 
-        longitude = data.get("longitude")
-        latitude = data.get("latitude")
+        longitude = data.get("longitude" , "Unknown")
+        latitude = data.get("latitude" , "Unknown")
 
         print(Fore.GREEN + "Network: " + network)
         print(Fore.GREEN + "Version: " + version)
@@ -238,9 +233,11 @@ enter command: """)
         start_sherlock = ["sherlock" , "-h"]
         subprocess.run(start_sherlock)
 
-
+    elif question == "support":
+        webbrowser.open("https://www.instagram.com/Redsimit")
+        webbrowser.open("https://discord.gg/4HJefrDyaZ")
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // ERROR HANDLING // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     else:
-        print(Fore.RED + "Unknown command... ")
+        print(Fore.RED + "[~] Unknown command... ")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
