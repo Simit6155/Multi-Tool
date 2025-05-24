@@ -236,6 +236,7 @@ enter command: """)
     elif question == "support":
         webbrowser.open("https://www.instagram.com/Redsimit")
         webbrowser.open("https://discord.gg/4HJefrDyaZ")
+        webbrowser.open("https://github.com/Simit6155")
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // ERROR HANDLING // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     else:
