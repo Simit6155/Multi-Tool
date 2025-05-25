@@ -16,20 +16,20 @@ init(autoreset=True)                                                            
 command = ""
 while command != "q":
     def redsimit():
-        print(Fore.RED + "           ██████╗ ███████╗██████╗ ███████╗██╗███╗   ███╗██╗████████╗")
-        print(Fore.RED + "           ██╔══██╗██╔════╝██╔══██╗██╔════╝██║████╗ ████║██║╚══██╔══╝")
-        print(Fore.RED + "           ██████╔╝█████╗  ██║  ██║███████╗██║██╔████╔██║██║   ██║   ")
-        print(Fore.RED + "           ██╔══██╗██╔══╝  ██║  ██║╚════██║██║██║╚██╔╝██║██║   ██║   ")
-        print(Fore.RED + "           ██║  ██║███████╗██████╔╝███████║██║██║ ╚═╝ ██║██║   ██║   ")
-        print(Fore.RED + "           ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ")
+        print(Fore.RED + "         ██████╗ ███████╗██████╗ ███████╗██╗███╗   ███╗██╗████████╗")
+        print(Fore.RED + "         ██╔══██╗██╔════╝██╔══██╗██╔════╝██║████╗ ████║██║╚══██╔══╝")
+        print(Fore.RED + "         ██████╔╝█████╗  ██║  ██║███████╗██║██╔████╔██║██║   ██║   ")
+        print(Fore.RED + "         ██╔══██╗██╔══╝  ██║  ██║╚════██║██║██║╚██╔╝██║██║   ██║   ")
+        print(Fore.RED + "         ██║  ██║███████╗██████╔╝███████║██║██║ ╚═╝ ██║██║   ██║   ")
+        print(Fore.RED + "         ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ")
         print(Fore.RED + "                               Made by @redsimit ")
 
     redsimit()
 
     question = input(Fore.GREEN + """
 Avaible commands:
-q = quit
-
+q = quit                                                                ~~~~~~~ Prank ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                                            call = opens p.caller to call anonymous
 ~~~~~~~~ Networking ~~~~~~~~~~~~~                                        
 geo = opens geolocator                                              ~~~~~~~~~~ Attacking ~~~~~~~~~~~           
 m port = opens a multi port scanner                                       spam = opens spambot    
@@ -43,12 +43,27 @@ alhack = opens albanian hacking tool --- linux only :(                  support 
 enter command: """)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+    def clear():
+        if os.name == "nt":
+            os.system("cls")
+        else:
+            os.system("clear")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // MAIN // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     if question == "geo":
+        clear()
+        print(Fore.RED + """
+         ▄████  ▓█████   ▒█████    ██████   ██▓  ███▄ ▄███▓  ██▓▄▄ ▄█████▓
+         ██▒ ▀█▒ ▓█   ▀  ▒██▒  ██▒ ▒██    ▒  ▓██▒ ▓██▒▀█▀ ██▒ ▓██▒▓   ██▒ ▓▒
+        ▒██░▄▄▄ ░▒███    ▒██░  ██▒ ░ ▓██▄    ▒██▒ ▓██    ▓██░ ▒██▒▒  ▓██░ ▒░
+        ░▓█  ██▓▒ ▓█  ▄  ▒██   ██░   ▒   ██▒ ░██░ ▒██    ▒██ ░ ██░░  ▓██▓ ░ 
+        ░▒▓███▀▒░ ▒████▒ ░ ████▓▒░ ▒██████▒▒ ░██░ ▒██▒   ░██▒░ ██░  ▒██▒ ░ 
+         ░▒   ▒ ░░ ▒░ ░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░░▓  ░ ▒░   ░  ░░▓    ▒ ░░   
+          ░   ░  ░ ░  ░  ░ ▒ ▒░ ░ ░▒  ░ ░ ▒ ░░  ░      ░ ▒ ░    ░    
+         ░ ░   ░    ░   ░ ░ ░ ▒  ░  ░  ░   ▒ ░░      ░    ▒ ░  ░      
+               ░    ░  ░    ░ ░        ░   ░         ░    ░           
+                Made by @Redsimit                                             """)
         ip = input(Fore.GREEN + "Enter IP Address: ")
-        print(Fore.RED + "GEOLOCATER MADE BY @REDSIMIT")
         url = f"https://ipapi.co/{ip}/json/"
         response = requests.get(url , timeout = 5)
         data = response.json()
@@ -94,6 +109,7 @@ enter command: """)
         break
 
     elif question == "s port":
+        clear()
         print(Fore.RED + "THIS PORT TESTER WAS MADE BY @REDSIMIT")
         ip = "127.0.0.1"
         port = int(input(Fore.GREEN + "Input the following port: "))
@@ -108,6 +124,7 @@ enter command: """)
             print(Fore.GREEN + "port is closed")
 
     elif question == "m port":
+        clear()
         import socket
         import colorama
         from colorama import Fore, init
@@ -185,6 +202,7 @@ enter command: """)
             print(Fore.GREEN + f"Port {ports[10]} closed ")
 
     elif question == "spam":
+        clear()
         print(Fore.GREEN + "BECAREFULL USING THIS BOT IT MIGHT CRASH THE VICTIMS DEVICE!! ")
         limit = input(Fore.RED + "Input the number of messages to send: ")
         speed = input(Fore.RED + "Input the waiting time between messages: ")
@@ -200,6 +218,7 @@ enter command: """)
             time.sleep(int(speed))
 
     elif question == "rat":
+        clear()
         password = input(Fore.RED + "INSTALLING THE TOOL (enter to continue): ")
         repo = "https://github.com/Simit6155/SchimmelBox-Warriors.git"
         clone_cmd = ["git", "clone", repo]
@@ -210,6 +229,7 @@ enter command: """)
         subprocess.run(["python3", "server.py"])
 
     elif question == "fish":
+        clear()
         phish_repo = "https://github.com/htr-tech/zphisher.git"
         phish_clone = ["git", "clone", phish_repo]
         subprocess.run(phish_clone)
@@ -220,6 +240,7 @@ enter command: """)
         subprocess.run(start_phish)
 
     elif question == "cam":
+        clear()
         cam_repo = "https://github.com/techchipnet/CamPhish.git"
         cam_clone = ["git", "clone", cam_repo]
         subprocess.run(cam_clone)
@@ -230,6 +251,7 @@ enter command: """)
         subprocess.run(start_cam)
 
     elif question == "osint":
+        clear()
         start_sherlock = ["sherlock" , "-h"]
         subprocess.run(start_sherlock)
 
@@ -237,6 +259,47 @@ enter command: """)
         webbrowser.open("https://www.instagram.com/Redsimit")
         webbrowser.open("https://discord.gg/4HJefrDyaZ")
         webbrowser.open("https://github.com/Simit6155")
+
+    elif question == "call":
+        clear()
+        import webbrowser
+        import colorama
+        import requests
+        from colorama import Fore, init
+        import pyautogui
+        import time
+
+        init(autoreset=True)
+
+        print(Fore.RED + """
+        ▄▄▄·    ▄▄·  ▄▄▄· ▄▄▌  ▄▄▌  ▄▄▄ .▄▄▄  
+        ▐█ ▄█   ▐█ ▌▪▐█ ▀█ ██•  ██•  ▀▄.▀·▀▄ █·
+         ██▀·   ██ ▄▄▄█▀▀█ ██▪  ██▪  ▐▀▀▪▄▐▀▀▄ 
+        ▐█▪·•   ▐███▌▐█ ▪▐▌▐█▌▐▌▐█▌▐▌▐█▄▄▌▐█•█▌
+        .▀    ▀ ·▀▀▀  ▀  ▀ .▀▀▀ .▀▀▀  ▀▀▀ .▀  ▀""")
+
+        print(Fore.RED + "~~~~ Author @Redsimit ~~~~ ")
+
+
+        def phone_call():
+            number = input(Fore.GREEN + "Enter number: ")
+            print(Fore.GREEN + "Calling dont move your mouse . . . . ")
+            webbrowser.open("https://callmyphone.org")
+            time.sleep(5)
+            pyautogui.leftClick(902, 389)
+            time.sleep(1)
+            pyautogui.typewrite(number)
+            time.sleep(0.5)
+            pyautogui.leftClick(1257, 389)
+
+
+        phone_call()
+
+        callagain = input(Fore.GREEN + "Call again? y/n ")
+        if callagain.lower() == "y":
+            phone_call()
+        elif callagain.lower() == "n":
+            print(Fore.GREEN + "Closing . . . .")
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // ERROR HANDLING // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     else:
