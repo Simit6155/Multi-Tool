@@ -16,30 +16,25 @@ init(autoreset=True)                                                            
 command = ""
 while command != "q":
     def redsimit():
-        print(Fore.RED + "         ██████╗ ███████╗██████╗ ███████╗██╗███╗   ███╗██╗████████╗")
-        print(Fore.RED + "         ██╔══██╗██╔════╝██╔══██╗██╔════╝██║████╗ ████║██║╚══██╔══╝")
-        print(Fore.RED + "         ██████╔╝█████╗  ██║  ██║███████╗██║██╔████╔██║██║   ██║   ")
-        print(Fore.RED + "         ██╔══██╗██╔══╝  ██║  ██║╚════██║██║██║╚██╔╝██║██║   ██║   ")
-        print(Fore.RED + "         ██║  ██║███████╗██████╔╝███████║██║██║ ╚═╝ ██║██║   ██║   ")
-        print(Fore.RED + "         ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ")
+        print(Fore.RED + "               ██████╗ ███████╗██████╗ ███████╗██╗███╗   ███╗██╗████████╗")
+        print(Fore.RED + "               ██╔══██╗██╔════╝██╔══██╗██╔════╝██║████╗ ████║██║╚══██╔══╝")
+        print(Fore.RED + "               ██████╔╝█████╗  ██║  ██║███████╗██║██╔████╔██║██║   ██║   ")
+        print(Fore.RED + "               ██╔══██╗██╔══╝  ██║  ██║╚════██║██║██║╚██╔╝██║██║   ██║   ")
+        print(Fore.RED + "               ██║  ██║███████╗██████╔╝███████║██║██║ ╚═╝ ██║██║   ██║   ")
+        print(Fore.RED + "               ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ")
         print(Fore.RED + "                               Made by @redsimit ")
 
     redsimit()
 
     question = input(Fore.GREEN + """
-Avaible commands:
-q = quit                                                                ~~~~~~~ Prank ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                                                            call = opens p.caller to call anonymous
-~~~~~~~~ Networking ~~~~~~~~~~~~~                                        
-geo = opens geolocator                                              ~~~~~~~~~~ Attacking ~~~~~~~~~~~           
-m port = opens a multi port scanner                                       spam = opens spambot    
-s port = opens a single port scanner                                      rat = opens a reverse shell // linux only
-osint = opens a tool for osint --- linux only                             fish = opens a phishing tool // linux only
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                         cam = opens a cam hacking tool // linux only
-~~~~~~~~~ Other popular Multi-Tools ~~~~~~~~~                       ~~~~~~~~~~~ Support me ~~~~~~~~~~~~~~
-alhack = opens albanian hacking tool --- linux only :(                  support = opens my social media accounts
-///////////////////////////////////////
-
+Avaible commands: ═════════════════════╗═══════════════════════════════════════╗
+╚═ Networking:                         ╚═ Attacking:                           ╚═ Other:
+  ╚═ m port = scans multiple ports       ╚═  spam = spammbot                     ╚═ q = quit
+     s port = scans single port              rat = reverse shell //kali             support
+     osint = info gathering //kali           fish = phishing //kali   
+     call = calls anonym //BETA              cam = webcam hacker //kali
+     geo = opens geolocator                  alhack = another multi tool //kali
+                            
 enter command: """)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -150,11 +145,7 @@ enter command: """)
                                              ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀  ▀  ▀  ▀            ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀ 
                                                                                                                                                     
 """)
-        import socket
-        import colorama
-        from colorama import Fore, init
 
-        init(autoreset=True)
 
         print(Fore.LIGHTGREEN_EX + "                                                                This Multi-Port tester was made by @Redsimit ")
         ip = "127.0.0.1"
@@ -237,6 +228,7 @@ enter command: """)
                    █     ▐   █    ▐    ▐      █         ▐     ▐                █      █    ▐   ▐     ▐   
                     ▐         ▐                ▐                                ▐      ▐                  """)
         print(Fore.GREEN + "             Author: @Redsimit")
+      
         limit = input(Fore.RED + "Input the number of messages to send: ")
         speed = input(Fore.RED + "Input the waiting time between messages: ")
         word = input(Fore.RED + "Input your message: ")
@@ -352,6 +344,8 @@ enter command: """)
             time.sleep(1)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // ERROR HANDLING // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
     else:
         print(Fore.RED + "[~] Unknown command... ")
+      
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
