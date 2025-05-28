@@ -16,8 +16,6 @@ This project is built for **ethical hacking**, OSINT, and fun scripting challeng
 ╚═ geo = Open geolocator in browser
 
 markdown
-Kopieren
-Bearbeiten
 
 💣 **Attacking** *(for testing and educational use only)*:
 ╚═ spam = Spam bot
@@ -27,16 +25,12 @@ Bearbeiten
 ╚═ alhack = Another multi-tool (Kali)
 
 markdown
-Kopieren
-Bearbeiten
 
 🔧 **Other**:
 ╚═ q = Quit the tool
 ╚═ support = Get help and support
 
 yaml
-Kopieren
-Bearbeiten
 
 ---
 
@@ -49,8 +43,6 @@ Bearbeiten
 Run the tool:
 
 bash
-Kopieren
-Bearbeiten
 python3 cybertoolkit.py
 Make sure you’re using Kali Linux for full feature support.
 
