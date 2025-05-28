@@ -30,7 +30,6 @@ markdown
 ╚═ q = Quit the tool
 ╚═ support = Get help and support
 
-yaml
 
 ---
 
@@ -66,3 +65,4 @@ The developer (Semih) is not liable for any misuse.
 
 ⭐ Give a Star!
 If you like the project, drop a ⭐ on the repo to support future tools!
+> Author: **Semih (aka simit)** – young cybersecurity enthusiast from 🇹🇷
