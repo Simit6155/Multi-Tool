@@ -1,6 +1,7 @@
-The command "geo" opens a geolocator which works using an Ip adress to find informations about it including koordinates  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-command port tests open ports avaible   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-command spam opens a super fast spammbot to send messages really fast just put your cursor on the sending bar   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-rat opens a reverse shell ( remote access control typa thing) just send the client.py to the victims pc make them run it while ur listening in server.py and then connects   ~~~~~~~~~~~~~~~~~~~~~~~~~
-fish installs and opens a popular kali linux tool to make phishing websites    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-cam also installs and runs a popular kali linux tool called camphish makes a link to get access to your victims webcam    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Avaible commands: ═════════════════════╗═══════════════════════════════════════╗
+╚═ Networking:                         ╚═ Attacking:                           ╚═ Other:
+  ╚═ m port = scans multiple ports       ╚═  spam = spammbot                     ╚═ q = quit
+     s port = scans single port              rat = reverse shell //kali             support
+     osint = info gathering //kali           fish = phishing //kali   
+     call = calls anonym //BETA              cam = webcam hacker //kali
+     geo = opens geolocator                  alhack = another multi tool //kali
