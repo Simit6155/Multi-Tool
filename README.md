@@ -1,37 +1,76 @@
-# Redsimit Multitool
-A simple yet powerful multitool for cybersecurity and automation, built in Python. This tool combines multiple useful functions, including an IP geolocator, port tester, and spam bot, all within a single interface.
+# 🛠️ RedSimit CyberToolKit 🧠💣
 
-## Features
-Geolocator: Enter an IP address and retrieve detailed location information, including the country, city, postal code, and geographical coordinates (latitude/longitude). It also provides a link to the location on Google Maps.
+Welcome to **RedSimit CyberToolKit** – your all-in-one toolbox for educational cybersecurity experiments! 💻🧑‍💻  
+This project is built for **ethical hacking**, OSINT, and fun scripting challenges.  
+**⚠️ Use only in legal environments and with permission!**
 
-## Port Tester: Check if a specific port is open on a given IP address, useful for network troubleshooting or security testing.
+---
 
-## Spam Bot: A simple automation script that sends a specified number of messages to a target input field. Be cautious: Using this tool irresponsibly can cause disruptions and crashes for the target system.
+## ⚙️ Features & Commands
 
-## Installation
-Clone the repository:
+🔍 **Networking**:
+╚═ m port = Scan multiple ports
+╚═ s port = Scan a single port
+╚═ osint = Info gathering (requires Kali)
+╚═ call = Anonymous call (BETA)
+╚═ geo = Open geolocator in browser
 
-git clone https://github.com/Simit6155/redsimit-multitool.git
-Install the required libraries:
+markdown
+Kopieren
+Bearbeiten
 
-pip install -r requirements.txt
+💣 **Attacking** *(for testing and educational use only)*:
+╚═ spam = Spam bot
+╚═ rat = Reverse shell (Kali)
+╚═ fish = Phishing tool (Kali)
+╚═ cam = Webcam hack simulator (Kali)
+╚═ alhack = Another multi-tool (Kali)
+
+markdown
+Kopieren
+Bearbeiten
+
+🔧 **Other**:
+╚═ q = Quit the tool
+╚═ support = Get help and support
+
+yaml
+Kopieren
+Bearbeiten
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repo**:
+   ```bash
+   git clone https://github.com/Simit6155/RedSimit-CyberToolKit.git
+   cd RedSimit-CyberToolKit
 Run the tool:
 
-python redsimit_tool.py
-## Commands
-geo: Opens the IP geolocator.
+bash
+Kopieren
+Bearbeiten
+python3 cybertoolkit.py
+Make sure you’re using Kali Linux for full feature support.
 
-port: Opens the port tester.
+📦 Requirements
+Python 3.x 🐍
 
-spam: Opens the spam bot (with caution!).
+Kali Linux (for certain modules) 🐲
 
-q: Exit the program.
+Some tools require internet access 🌐
 
-## Disclaimer
-This tool is intended for ethical and educational purposes only. Misuse of the spam bot or other features could cause harm or disrupt services. Always make sure you have permission before using any of the tools.
+🧠 Legal Disclaimer
+This tool is made for educational and ethical purposes only.
+You are responsible for using it in legal environments.
+The developer (Semih) is not liable for any misuse.
 
-## Please Note that this isn't finished problems might occur
+🌐 Follow Me & Support
 
+📸 Instagram: @redsimit
 
+💬 Discord: https://discord.gg/FyKAf9crA4
 
-
+⭐ Give a Star!
+If you like the project, drop a ⭐ on the repo to support future tools!
