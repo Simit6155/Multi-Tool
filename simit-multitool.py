@@ -14,28 +14,36 @@ init(autoreset=True)                                                            
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // INTRO // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 command = ""
+
+
+def redsimit():
+    print(Fore.RED + "               ██████╗ ███████╗██████╗ ███████╗██╗███╗   ███╗██╗████████╗")
+    print(Fore.RED + "               ██╔══██╗██╔════╝██╔══██╗██╔════╝██║████╗ ████║██║╚══██╔══╝")
+    print(Fore.RED + "               ██████╔╝█████╗  ██║  ██║███████╗██║██╔████╔██║██║   ██║   ")
+    print(Fore.RED + "               ██╔══██╗██╔══╝  ██║  ██║╚════██║██║██║╚██╔╝██║██║   ██║   ")
+    print(Fore.RED + "               ██║  ██║███████╗██████╔╝███████║██║██║ ╚═╝ ██║██║   ██║   ")
+    print(Fore.RED + "               ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ")
+    print(Fore.RED + "                               Made by @redsimit ")
+redsimit()
+
+def avaible_commands():
+    print(Fore.GREEN + """
+    Avaible commands: ═════════════════════╗═══════════════════════════════════════╗
+    ╚═ Networking:                         ╚═ Attacking:                           ╚═ Other:
+      ╚═ m port = scans multiple ports       ╚═  spam = spammbot                     ╚═ q = quit
+         s port = scans single port              rat = reverse shell //kali             support
+         osint = info gathering //kali           fish = phishing //kali                 help = displays commands
+         call = calls anonym //BETA              cam = webcam hacker //kali
+         geo = opens geolocator                  alhack = another multi tool //kali
+    
+    """)
+avaible_commands()
+
+
 while command != "q":
-    def redsimit():
-        print(Fore.RED + "               ██████╗ ███████╗██████╗ ███████╗██╗███╗   ███╗██╗████████╗")
-        print(Fore.RED + "               ██╔══██╗██╔════╝██╔══██╗██╔════╝██║████╗ ████║██║╚══██╔══╝")
-        print(Fore.RED + "               ██████╔╝█████╗  ██║  ██║███████╗██║██╔████╔██║██║   ██║   ")
-        print(Fore.RED + "               ██╔══██╗██╔══╝  ██║  ██║╚════██║██║██║╚██╔╝██║██║   ██║   ")
-        print(Fore.RED + "               ██║  ██║███████╗██████╔╝███████║██║██║ ╚═╝ ██║██║   ██║   ")
-        print(Fore.RED + "               ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ")
-        print(Fore.RED + "                               Made by @redsimit ")
 
-    redsimit()
+    question = input(Fore.RED + "| > ")
 
-    question = input(Fore.GREEN + """
-Avaible commands: ═════════════════════╗═══════════════════════════════════════╗
-╚═ Networking:                         ╚═ Attacking:                           ╚═ Other:
-  ╚═ m port = scans multiple ports       ╚═  spam = spammbot                     ╚═ q = quit
-     s port = scans single port              rat = reverse shell //kali             support
-     osint = info gathering //kali           fish = phishing //kali   
-     call = calls anonym //BETA              cam = webcam hacker //kali
-     geo = opens geolocator                  alhack = another multi tool //kali
-                            
-enter command: """)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def clear():
@@ -99,6 +107,7 @@ enter command: """)
 
 
     elif question == "q":
+        clear()
         print(Fore.GREEN + "closing program...")
         time.sleep(1)
         break
@@ -117,7 +126,7 @@ enter command: """)
                                                                  ▀                                                ███    ███                            ███    ███         
 """)
         print(Fore.LIGHTBLUE_EX + "                                    THIS PORT TESTER WAS MADE BY @REDSIMIT")
-        ip = "127.0.0.1"
+        ip = input(Fore.GREEN + "IP to scan: ")
         port = int(input(Fore.GREEN + "Input the following port: "))
         time.sleep(1)
         print(Fore.LIGHTGREEN_EX + "Connecting...")
@@ -146,76 +155,17 @@ enter command: """)
                                                                                                                                                     
 """)
 
-
         print(Fore.LIGHTGREEN_EX + "                                                                This Multi-Port tester was made by @Redsimit ")
-        ip = "127.0.0.1"
-        ports = [4444, 22, 8080, 443, 21, 22, 23, 25, 53, 80, 31337]
+        ip = input(Fore.GREEN + "Enter IP to scan: ")
+        ports = [4444, 22, 8080, 443, 21, 22, 23, 25, 53, 80, 31337, 445, 6973, 110, 3306]
 
-        try:
-            socket.create_connection((ip, ports[0]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[0]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[0]} closed ")
+        for port in ports:
+            try:
+                socket.create_connection((ip, port), timeout=3)
+                print(Fore.GREEN + f"Port {port} open ")
+            except socket.error:
+                print(Fore.GREEN + f"Port {port} closed ")
 
-        try:
-            socket.create_connection((ip, ports[1]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[1]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[1]} closed ")
-
-        try:
-            socket.create_connection((ip, ports[2]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[2]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[2]} closed ")
-
-        try:
-            socket.create_connection((ip, ports[3]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[3]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[3]} closed ")
-
-        try:
-            socket.create_connection((ip, ports[4]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[4]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[4]} closed ")
-
-        try:
-            socket.create_connection((ip, ports[5]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[5]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[5]} closed ")
-
-        try:
-            socket.create_connection((ip, ports[6]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[6]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[6]} closed ")
-
-        try:
-            socket.create_connection((ip, ports[7]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[7]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[7]} closed ")
-
-        try:
-            socket.create_connection((ip, ports[8]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[8]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[8]} closed ")
-
-        try:
-            socket.create_connection((ip, ports[9]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[9]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[9]} closed ")
-
-        try:
-            socket.create_connection((ip, ports[10]), timeout=3)
-            print(Fore.GREEN + f"Port {ports[10]} open ")
-        except socket.error:
-            print(Fore.GREEN + f"Port {ports[10]} closed ")
 
     elif question == "spam":
         clear()
@@ -228,7 +178,6 @@ enter command: """)
                    █     ▐   █    ▐    ▐      █         ▐     ▐                █      █    ▐   ▐     ▐   
                     ▐         ▐                ▐                                ▐      ▐                  """)
         print(Fore.GREEN + "             Author: @Redsimit")
-      
         limit = input(Fore.RED + "Input the number of messages to send: ")
         speed = input(Fore.RED + "Input the waiting time between messages: ")
         word = input(Fore.RED + "Input your message: ")
@@ -303,15 +252,6 @@ enter command: """)
 
     elif question == "call":
         clear()
-        import webbrowser
-        import colorama
-        import requests
-        from colorama import Fore, init
-        import pyautogui
-        import time
-
-        init(autoreset=True)
-
         print(Fore.RED + """
         ▄▄▄·    ▄▄·  ▄▄▄· ▄▄▌  ▄▄▌  ▄▄▄ .▄▄▄  
         ▐█ ▄█   ▐█ ▌▪▐█ ▀█ ██•  ██•  ▀▄.▀·▀▄ █·
@@ -320,7 +260,6 @@ enter command: """)
         .▀    ▀ ·▀▀▀  ▀  ▀ .▀▀▀ .▀▀▀  ▀▀▀ .▀  ▀""")
 
         print(Fore.RED + "~~~~ Author @Redsimit ~~~~ ")
-
 
         def phone_call():
             number = input(Fore.GREEN + "Enter number: ")
@@ -343,9 +282,9 @@ enter command: """)
             print(Fore.GREEN + "Closing . . . .")
             time.sleep(1)
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // ERROR HANDLING // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  
+    elif question == "help":
+        clear()
+        avaible_commands()
+
     else:
-        print(Fore.RED + "[~] Unknown command... ")
-      
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        print(Fore.RED + "[~] Unknown command... use command help to see available commands")
