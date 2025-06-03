@@ -22,7 +22,6 @@ markdown
 ╚═ rat = Reverse shell (Kali)
 ╚═ fish = Phishing tool (Kali)
 ╚═ cam = Webcam hack simulator (Kali)
-╚═ alhack = Another multi-tool (Kali)
 
 markdown
 
