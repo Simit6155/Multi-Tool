@@ -3,9 +3,9 @@ import socket
 import pyautogui
 import requests
 import webbrowser
-import colorama
 import subprocess
 import os
+import colorama
 from colorama import Fore, init
 init(autoreset=True)
 
@@ -22,9 +22,9 @@ def symbol_intro():
     print(Fore.RED + "                               Made by @redsimit ")
 symbol_intro()
 
-def avaible_commands():
+def available_commands():
     print(Fore.GREEN + """
-        Avaible commands: ═════════════════════╗═══════════════════════════════════════╗
+        Available commands: ═════════════════════╗═══════════════════════════════════════╗
         ╚═ Networking:                         ╚═ Attacking:                           ╚═ Other:
           ╚═ m port = scans multiple ports       ╚═  spam = spammbot                     ╚═ q = quit
              s port = scans single port              rat = reverse shell //kali             support
@@ -33,11 +33,11 @@ def avaible_commands():
              geo = opens geolocator                 
 
         """)
-avaible_commands()
+available_commands()
 
 def help():
     clear_terminal()
-    avaible_commands()
+    available_commands()
 
 def clear_terminal():
     if os.name == "nt":
@@ -48,16 +48,16 @@ def clear_terminal():
 def geolocator():
     clear_terminal()
     print(Fore.RED + """
-                                         ▄████  ▓█████   ▒█████    ██████   ██▓  ███▄ ▄███▓  ██▓▄▄ ▄█████▓
-                                         ██▒ ▀█▒ ▓█   ▀  ▒██▒  ██▒ ▒██    ▒  ▓██▒ ▓██▒▀█▀ ██▒ ▓██▒▓   ██▒ ▓▒
-                                        ▒██░▄▄▄ ░▒███    ▒██░  ██▒ ░ ▓██▄    ▒██▒ ▓██    ▓██░ ▒██▒▒  ▓██░ ▒░
-                                        ░▓█  ██▓▒ ▓█  ▄  ▒██   ██░   ▒   ██▒ ░██░ ▒██    ▒██ ░ ██░░  ▓██▓ ░ 
-                                        ░▒▓███▀▒░ ▒████▒ ░ ████▓▒░ ▒██████▒▒ ░██░ ▒██▒   ░██▒░ ██░  ▒██▒ ░ 
-                                         ░▒   ▒ ░░ ▒░ ░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░░▓  ░ ▒░   ░  ░░▓    ▒ ░░   
-                                          ░   ░  ░ ░  ░  ░ ▒ ▒░ ░ ░▒  ░ ░ ▒ ░░  ░      ░ ▒ ░    ░    
-                                         ░ ░   ░    ░   ░ ░ ░ ▒  ░  ░  ░   ▒ ░░      ░    ▒ ░  ░      
-                                               ░    ░  ░    ░ ░        ░   ░         ░    ░           
-                                                              Made by @Redsimit                                             """)
+                         ▄████  ▓█████   ▒█████    ██████   ██▓  ███▄ ▄███▓  ██▓▄▄ ▄█████▓
+                         ██▒ ▀█▒ ▓█   ▀  ▒██▒  ██▒ ▒██    ▒  ▓██▒ ▓██▒▀█▀ ██▒ ▓██▒▓   ██▒ ▓▒
+                        ▒██░▄▄▄ ░▒███    ▒██░  ██▒ ░ ▓██▄    ▒██▒ ▓██    ▓██░ ▒██▒▒  ▓██░ ▒░
+                        ░▓█  ██▓▒ ▓█  ▄  ▒██   ██░   ▒   ██▒ ░██░ ▒██    ▒██ ░ ██░░  ▓██▓ ░ 
+                        ░▒▓███▀▒░ ▒████▒ ░ ████▓▒░ ▒██████▒▒ ░██░ ▒██▒   ░██▒░ ██░  ▒██▒ ░ 
+                         ░▒   ▒ ░░ ▒░ ░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░░▓  ░ ▒░   ░  ░░▓    ▒ ░░   
+                          ░   ░  ░ ░  ░  ░ ▒ ▒░ ░ ░▒  ░ ░ ▒ ░░  ░      ░ ▒ ░    ░    
+                         ░ ░   ░    ░   ░ ░ ░ ▒  ░  ░  ░   ▒ ░░      ░    ▒ ░  ░      
+                               ░    ░  ░    ░ ░        ░   ░         ░    ░           
+                                              Made by @Redsimit                                             """)
     ip = input(Fore.GREEN + "Enter IP Address: ")
     url = f"https://ipapi.co/{ip}/json/"
     response = requests.get(url, timeout=5)
@@ -142,14 +142,24 @@ def multi_port_scanner():
     print(
         Fore.LIGHTGREEN_EX + "                                                                This Multi-Port tester was made by @Redsimit ")
     ip = input(Fore.GREEN + "Enter IP to scan: ")
-    ports = [4444, 22, 8080, 443, 21, 22, 23, 25, 53, 80, 31337, 445, 6973, 110, 3306]
+    ports = [4444, 445, 443, 8080,
+             20, 21, 22, 23, 25, 53,
+             68, 80, 110, 123, 135, 67,
+             137, 138, 139, 143, 161,
+             162, 389, 443, 445, 465,
+             514, 587, 636, 993, 995,
+             1080, 1433, 1521, 1723,
+             2049, 2121, 3306, 3389,
+             5432, 5900, 6000, 8080,
+             8443, 8888, 10000, 20000,
+             32768, 49152, 65535]
 
     for port in ports:
         try:
-            socket.create_connection((ip, port), timeout=3)
-            print(Fore.GREEN + f"Port {port} open ")
+            socket.create_connection((ip, port), timeout = 1)
+            print(Fore.RED + f"Port {port} open ")
         except socket.error:
-            print(Fore.GREEN + f"Port {port} closed ")
+            print(Fore.LIGHTBLACK_EX + f"Port {port} closed ")
 
 def spamm_bot():
     clear_terminal()
