@@ -183,7 +183,7 @@ def spamm_bot():
         pyautogui.typewrite(word)
         pyautogui.press("enter")
         a = a + 1
-        time.sleep(int(speed))
+        time.sleep(float(speed))
 
 def reverse_shell():
     clear_terminal()
