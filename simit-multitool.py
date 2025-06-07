@@ -24,12 +24,12 @@ symbol_intro()
 
 def available_commands():
     print(Fore.GREEN + """
-        Available commands: ═════════════════════╗═══════════════════════════════════════╗
+        Available commands: ═══════════════════╗═══════════════════════════════════════╗
         ╚═ Networking:                         ╚═ Attacking:                           ╚═ Other:
           ╚═ m port = scans multiple ports       ╚═  spam = spammbot                     ╚═ q = quit
              s port = scans single port              rat = reverse shell //kali             support
              osint = info gathering //kali           fish = phishing //kali                 help = displays commands
-             call = calls anonym //BETA              cam = webcam hacker //kali
+             call = calls anonym //BETA              cam = webcam hacker //kali             alhack = albanian ht //kali
              geo = opens geolocator                 
 
         """)
@@ -39,13 +39,13 @@ def help():
     clear_terminal()
     available_commands()
 
-def clear_terminal():
+def clear_terminal():                                                # clears the terminal
     if os.name == "nt":
         os.system("cls")
     else:
         os.system("clear")
 
-def geolocator():
+def geolocator():                                                    # might not work well if you dont have good internet
     clear_terminal()
     print(Fore.RED + """
                          ▄████  ▓█████   ▒█████    ██████   ██▓  ███▄ ▄███▓  ██▓▄▄ ▄█████▓
@@ -117,7 +117,7 @@ def single_port_scanner():
     time.sleep(2)
 
     try:
-        socket.create_connection((ip, port), timeout=4)
+        socket.create_connection((ip, port), timeout=4)         # you can change the timeout if you want cuz its kinda long
         print(Fore.GREEN + "port is open")
     except socket.error:
         print(Fore.GREEN + "port is closed")
@@ -156,12 +156,12 @@ def multi_port_scanner():
 
     for port in ports:
         try:
-            socket.create_connection((ip, port), timeout = 1)
+            socket.create_connection((ip, port), timeout = 1)                    # i recommend changing the timeout to 2 or 3 if you want to be sure
             print(Fore.RED + f"Port {port} open ")
         except socket.error:
             print(Fore.LIGHTBLACK_EX + f"Port {port} closed ")
 
-def spamm_bot():
+def spamm_bot():                                             # PUT YOUR CURSOR ON THE MESSAGE SENDING PLACE AND CLICK IT AND LET IT STAY THERE
     clear_terminal()
     print(Fore.YELLOW + """
                         ▄▀▀█▄▄   ▄▀▀█▄▄▄▄  ▄▀▀▀▀▄  ▄▀▀▀█▀▀▄  ▄▀▀▄▀▀▀▄  ▄▀▀▀▀▄   ▄▀▀▄ ▀▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄▀▀▀▄ 
@@ -224,7 +224,7 @@ def osint_tool():
     start_sherlock = ["sherlock", "-h"]
     subprocess.run(start_sherlock)
 
-def phone_caller():
+def phone_caller():                                                     # Might not work if your monitor doesent match the coordinates (DONT MOVE YOUR MOUSE)
     clear_terminal()
     print(Fore.RED + """
             ▄▄▄·    ▄▄·  ▄▄▄· ▄▄▌  ▄▄▌  ▄▄▄ .▄▄▄  
@@ -243,6 +243,23 @@ def phone_caller():
     pyautogui.typewrite(number)
     time.sleep(0.5)
     pyautogui.leftClick(1257, 389)
+
+def kali_update():
+    clear_terminal()
+    update = ["sudo", "apt", "update", "&&", "sudo", "apt", "upgrade", "-y" ]
+    subprocess.run(update)
+
+def albanian_ht():
+    clear_terminal()
+    kali_update()
+    aht_repo = "https://github.com/AlbanianCyberArmy/Albanian-Hacking-Tool.git"
+    aht_clone = ["git", "clone", aht_repo]
+    subprocess.run(aht_clone)
+    os.chdir("ALHacking")
+    alhack_access = ["chmod", "+x", "alhack.sh"]
+    subprocess.run(alhack_access)
+    alhack_start = ["bash", "alhack.sh"]
+    subprocess.run(alhack_start)
 
 def support_me():
     clear_terminal()
@@ -289,7 +306,7 @@ while command != "q":
     elif command == "osint":
         osint_tool()
 
-    elif command == "phone":
+    elif command == "call":
         phone_caller()
 
     elif command == "s port":
@@ -306,6 +323,9 @@ while command != "q":
 
     elif command == "rat":
         reverse_shell()
+
+    elif command == "alhack":
+        albanian_ht()
 
     elif command == "support":
         support_me()
