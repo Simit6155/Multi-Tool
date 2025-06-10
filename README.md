@@ -36,8 +36,7 @@ markdown
 
 1. **Clone the repo**:
    ```bash
-   git clone https://github.com/Simit6155/RedSimit-CyberToolKit.git
-   cd RedSimit-CyberToolKit
+   git clone https://github.com/Simit6155/Multi-Tool.git
 Run the tool:
 
 bash
