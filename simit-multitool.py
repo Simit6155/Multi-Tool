@@ -213,7 +213,7 @@ def cam_phish():
     cam_repo = "https://github.com/techchipnet/CamPhish.git"
     cam_clone = ["git", "clone", cam_repo]
     subprocess.run(cam_clone)
-    os.chdir("camphish")
+    os.chdir("CamPhish")
     mod_cam = ["chmod", "+x", "CamPhish.sh"]
     subprocess.run(mod_cam)
     start_cam = ["./CamPhish.sh"]
