@@ -7,9 +7,8 @@ import subprocess
 import os
 import colorama
 from colorama import Fore, init
+
 init(autoreset=True)
-
-
 
 
 def symbol_intro():
@@ -20,32 +19,39 @@ def symbol_intro():
     print(Fore.RED + "               ██║  ██║███████╗██████╔╝███████║██║██║ ╚═╝ ██║██║   ██║   ")
     print(Fore.RED + "               ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ")
     print(Fore.RED + "                               Made by @redsimit ")
+
+
 symbol_intro()
+
 
 def available_commands():
     print(Fore.GREEN + """
         Available commands: ═══════════════════╗═══════════════════════════════════════╗
         ╚═ Networking:                         ╚═ Attacking:                           ╚═ Other:
-          ╚═ m port = scans multiple ports       ╚═  spam = spammbot                     ╚═ q = quit
-             s port = scans single port              rat = reverse shell //kali             support
-             osint = info gathering //kali           fish = phishing //kali                 help = displays commands
-             call = calls anonym //BETA              cam = webcam hacker //kali             alhack = albanian ht //kali
-             geo = opens geolocator                 
+          ╚═ [1] Port scanner                      ╚═ [5] Spammbot                   ╚═ q = quit
+             [2] Geolocator                           [6] phishing // kali              help
+             [3] Osint tool // kali                   [7] Webcam Hack // kali           support
+             [4] Prank call                           [8] Payload + Listener // kali    [99] ALHack // kali
 
         """)
+
+
 available_commands()
+
 
 def help():
     clear_terminal()
     available_commands()
 
-def clear_terminal():                                                # clears the terminal
+
+def clear_terminal():  # clears the terminal
     if os.name == "nt":
         os.system("cls")
     else:
         os.system("clear")
 
-def geolocator():                                                    # might not work well if you dont have good internet
+
+def geolocator():  # might not work well if you dont have good internet
     clear_terminal()
     print(Fore.RED + """
                          ▄████  ▓█████   ▒█████    ██████   ██▓  ███▄ ▄███▓  ██▓▄▄ ▄█████▓
@@ -96,72 +102,81 @@ def geolocator():                                                    # might not
     print(Fore.GREEN + "Latitude: " + str(latitude))
     print(Fore.GREEN + f"https://www.google.com/maps?q={latitude},{longitude}")
 
-def single_port_scanner():
+def port_scanner():
     clear_terminal()
-    print(Fore.BLUE + """
-                               ▄████████  ▄█  ███▄▄▄▄      ▄██████▄   ▄█          ▄████████    ▄███████▄  ▄██████▄     ▄████████     ███        ▄████████    ▄████████ 
-                              ███    ███ ███  ███▀▀▀██▄   ███    ███ ███         ███    ███   ███    ███ ███    ███   ███    ███ ▀█████████▄   ███    ███   ███    ███ 
-                              ███    █▀  ███▌ ███   ███   ███    █▀  ███         ███    █▀    ███    ███ ███    ███   ███    ███    ▀███▀▀██   ███    █▀    ███    ███ 
-                              ███        ███▌ ███   ███  ▄███        ███        ▄███▄▄▄       ███    ███ ███    ███  ▄███▄▄▄▄██▀     ███   ▀  ▄███▄▄▄      ▄███▄▄▄▄██▀ 
-                            ▀███████████ ███▌ ███   ███ ▀▀███ ████▄  ███       ▀▀███▀▀▀     ▀█████████▀  ███    ███ ▀▀███▀▀▀▀▀       ███     ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   
-                                     ███ ███  ███   ███   ███    ███ ███         ███    █▄    ███        ███    ███ ▀███████████     ███       ███    █▄  ▀███████████ 
-                               ▄█    ███ ███  ███   ███   ███    ███ ███▌    ▄   ███    ███   ███        ███    ███   ███    ███     ███       ███    ███   ███    ███ 
-                             ▄████████▀  █▀    ▀█   █▀    ████████▀  █████▄▄██   ██████████  ▄████▀       ▀██████▀    ███    ███    ▄████▀     ██████████   ███    ███ 
-                                                                     ▀                                                ███    ███                            ███    ███         
-    """)
-    print(Fore.LIGHTBLUE_EX + "                                    THIS PORT TESTER WAS MADE BY @REDSIMIT")
-    ip = input(Fore.GREEN + "IP to scan: ")
-    port = int(input(Fore.GREEN + "Input the following port: "))
-    time.sleep(1)
-    print(Fore.LIGHTGREEN_EX + "Connecting...")
-    time.sleep(2)
+    choice = input(Fore.RED + """ 
+[1] Single Port scanner
+[2] Multi Port scanner
 
-    try:
-        socket.create_connection((ip, port), timeout=4)         # you can change the timeout if you want cuz its kinda long
-        print(Fore.GREEN + "port is open")
-    except socket.error:
-        print(Fore.GREEN + "port is closed")
+| > """)
 
-def multi_port_scanner():
-    clear_terminal()
-    print(Fore.GREEN + """
-                                                 ▄▄       ▄▄  ▄         ▄  ▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄  ▄  ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
-                                                ▐░░▌     ▐░░▌▐░▌       ▐░▌▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌▐░▌▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
-                                                ▐░▌░▌   ▐░▐░▌▐░▌       ▐░▌▐░▌      ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀  ▐░▐░▌░▌ ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌
-                                                ▐░▌▐░▌ ▐░▌▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░ ░▌  ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌       ▐░▌     ▐░▌     ▐░▌          ▐░▌       ▐░▌
-                                                ▐░▌ ▐░▐░▌ ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌      ▄▄█░█▄▄ ▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌     ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌
-                                                ▐░▌  ▐░▌  ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌     ▐░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌     ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
-                                                ▐░▌   ▀   ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌      ▀▀█░█▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌       ▐░▌▐░█▀▀▀▀█░█▀▀      ▐░▌     ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀█░█▀▀ 
-                                                ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░ ░▌  ▐░▌          ▐░▌       ▐░▌▐░▌     ▐░▌       ▐░▌     ▐░▌          ▐░▌     ▐░▌  
-                                                ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▄▄▄▄█░█▄▄▄▄  ▐░▐░▌░▌ ▐░▌          ▐░█▄▄▄▄▄▄▄█░▌▐░▌      ▐░▌      ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▐░▌ 
-                                                ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌     ▐░░░░░░░░░░░▌▐░▌▐░▌▐░▌▐░▌          ▐░░░░░░░░░░░▌▐░▌       ▐░▌     ▐░▌     ▐░░░░░░░░░░░▌▐░▌       ▐░▌
-                                                 ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀  ▀  ▀  ▀            ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀ 
+    if choice == "1":
+        clear_terminal()
+        print(Fore.BLUE + """
+   ▄████████  ▄█  ███▄▄▄▄      ▄██████▄   ▄█          ▄████████    ▄███████▄  ▄██████▄     ▄████████     ███        ▄████████    ▄████████ 
+  ███    ███ ███  ███▀▀▀██▄   ███    ███ ███         ███    ███   ███    ███ ███    ███   ███    ███ ▀█████████▄   ███    ███   ███    ███ 
+  ███    █▀  ███▌ ███   ███   ███    █▀  ███         ███    █▀    ███    ███ ███    ███   ███    ███    ▀███▀▀██   ███    █▀    ███    ███ 
+  ███        ███▌ ███   ███  ▄███        ███        ▄███▄▄▄       ███    ███ ███    ███  ▄███▄▄▄▄██▀     ███   ▀  ▄███▄▄▄      ▄███▄▄▄▄██▀ 
+▀███████████ ███▌ ███   ███ ▀▀███ ████▄  ███       ▀▀███▀▀▀     ▀█████████▀  ███    ███ ▀▀███▀▀▀▀▀       ███     ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   
+         ███ ███  ███   ███   ███    ███ ███         ███    █▄    ███        ███    ███ ▀███████████     ███       ███    █▄  ▀███████████ 
+   ▄█    ███ ███  ███   ███   ███    ███ ███▌    ▄   ███    ███   ███        ███    ███   ███    ███     ███       ███    ███   ███    ███ 
+ ▄████████▀  █▀    ▀█   █▀    ████████▀  █████▄▄██   ██████████  ▄████▀       ▀██████▀    ███    ███    ▄████▀     ██████████   ███    ███ 
+                                         ▀                                                ███    ███                            ███    ███         
+            """)
+        print(Fore.LIGHTBLUE_EX + "THIS PORT TESTER WAS MADE BY @REDSIMIT")
+        ip = input(Fore.GREEN + "IP to scan: ")
+        port = int(input(Fore.GREEN + "Input the following port: "))
+        time.sleep(1)
+        print(Fore.LIGHTGREEN_EX + "Connecting...")
+        time.sleep(2)
 
-    """)
-
-    print(
-        Fore.LIGHTGREEN_EX + "                                                                This Multi-Port tester was made by @Redsimit ")
-    ip = input(Fore.GREEN + "Enter IP to scan: ")
-    ports = [4444, 445, 443, 8080,
-             20, 21, 22, 23, 25, 53,
-             68, 80, 110, 123, 135, 67,
-             137, 138, 139, 143, 161,
-             162, 389, 443, 445, 465,
-             514, 587, 636, 993, 995,
-             1080, 1433, 1521, 1723,
-             2049, 2121, 3306, 3389,
-             5432, 5900, 6000, 8080,
-             8443, 8888, 10000, 20000,
-             32768, 49152, 65535]
-
-    for port in ports:
         try:
-            socket.create_connection((ip, port), timeout = 1)                    # i recommend changing the timeout to 2 or 3 if you want to be sure
-            print(Fore.RED + f"Port {port} open ")
+            socket.create_connection((ip, port), timeout=4)  # you can change the timeout if you want cuz its kinda long
+            print(Fore.GREEN + "port is open")
         except socket.error:
-            print(Fore.LIGHTBLACK_EX + f"Port {port} closed ")
+            print(Fore.GREEN + "port is closed")
 
-def spamm_bot():                                             # PUT YOUR CURSOR ON THE MESSAGE SENDING PLACE AND CLICK IT AND LET IT STAY THERE
+    elif choice == "2":
+        clear_terminal()
+        print(Fore.GREEN + """
+ ▄▄       ▄▄  ▄         ▄  ▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄  ▄  ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░░▌     ▐░░▌▐░▌       ▐░▌▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌▐░▌▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░▌░▌   ▐░▐░▌▐░▌       ▐░▌▐░▌      ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀  ▐░▐░▌░▌ ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌
+▐░▌▐░▌ ▐░▌▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░ ░▌  ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌       ▐░▌     ▐░▌     ▐░▌          ▐░▌       ▐░▌
+▐░▌ ▐░▐░▌ ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌      ▄▄█░█▄▄ ▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌     ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌
+▐░▌  ▐░▌  ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌     ▐░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌     ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░▌   ▀   ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌      ▀▀█░█▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌       ▐░▌▐░█▀▀▀▀█░█▀▀      ▐░▌     ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀█░█▀▀ 
+▐░▌       ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░ ░▌  ▐░▌          ▐░▌       ▐░▌▐░▌     ▐░▌       ▐░▌     ▐░▌          ▐░▌     ▐░▌  
+▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▄▄▄▄█░█▄▄▄▄  ▐░▐░▌░▌ ▐░▌          ▐░█▄▄▄▄▄▄▄█░▌▐░▌      ▐░▌      ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▐░▌ 
+▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌     ▐░░░░░░░░░░░▌▐░▌▐░▌▐░▌▐░▌          ▐░░░░░░░░░░░▌▐░▌       ▐░▌     ▐░▌     ▐░░░░░░░░░░░▌▐░▌       ▐░▌
+ ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀  ▀  ▀  ▀            ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀ 
+
+            """)
+
+        print(
+            Fore.LIGHTGREEN_EX + "This Multi-Port tester was made by @Redsimit ")
+        ip = input(Fore.GREEN + "Enter IP to scan: ")
+        ports = [4444, 445, 443, 8080,
+                 20, 21, 22, 23, 25, 53,
+                 68, 80, 110, 123, 135, 67,
+                 137, 138, 139, 143, 161,
+                 162, 389, 443, 445, 465,
+                 514, 587, 636, 993, 995,
+                 1080, 1433, 1521, 1723,
+                 2049, 2121, 3306, 3389,
+                 5432, 5900, 6000, 8080,
+                 8443, 8888, 10000, 20000,
+                 32768, 49152, 65535]
+
+        for port in ports:
+            try:
+                socket.create_connection((ip, port),
+                                         timeout=1)  # i recommend changing the timeout to 2 or 3 if you want to be sure
+                print(Fore.RED + f"Port {port} open ")
+            except socket.error:
+                print(Fore.LIGHTBLACK_EX + f"Port {port} closed ")
+
+def spamm_bot():  # PUT YOUR CURSOR ON THE MESSAGE SENDING PLACE AND CLICK IT AND LET IT STAY THERE
     clear_terminal()
     print(Fore.YELLOW + """
                         ▄▀▀█▄▄   ▄▀▀█▄▄▄▄  ▄▀▀▀▀▄  ▄▀▀▀█▀▀▄  ▄▀▀▄▀▀▀▄  ▄▀▀▀▀▄   ▄▀▀▄ ▀▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄▀▀▀▄ 
@@ -185,6 +200,7 @@ def spamm_bot():                                             # PUT YOUR CURSOR O
         a = a + 1
         time.sleep(float(speed))
 
+
 def reverse_shell():
     clear_terminal()
     print(Fore.RED + "INSTALLING THE TOOL (enter to continue) ")
@@ -197,6 +213,7 @@ def reverse_shell():
     time.sleep(3)
     subprocess.run(["python3", "server.py"])
 
+
 def zphisher():
     clear_terminal()
     phish_repo = "https://github.com/htr-tech/zphisher.git"
@@ -207,6 +224,7 @@ def zphisher():
     subprocess.run(mod_phish)
     start_phish = ["./zphisher.sh"]
     subprocess.run(start_phish)
+
 
 def cam_phish():
     clear_terminal()
@@ -219,12 +237,14 @@ def cam_phish():
     start_cam = ["./CamPhish.sh"]
     subprocess.run(start_cam)
 
+
 def osint_tool():
     clear_terminal()
     start_sherlock = ["sherlock", "-h"]
     subprocess.run(start_sherlock)
 
-def phone_caller():                                                     # Might not work if your monitor doesent match the coordinates (DONT MOVE YOUR MOUSE)
+
+def phone_caller():  # Might not work if your monitor doesent match the coordinates (DONT MOVE YOUR MOUSE)
     clear_terminal()
     print(Fore.RED + """
             ▄▄▄·    ▄▄·  ▄▄▄· ▄▄▌  ▄▄▌  ▄▄▄ .▄▄▄  
@@ -244,10 +264,12 @@ def phone_caller():                                                     # Might 
     time.sleep(0.5)
     pyautogui.leftClick(1257, 389)
 
+
 def kali_update():
     clear_terminal()
-    update = ["sudo", "apt", "update", "&&", "sudo", "apt", "upgrade", "-y" ]
+    update = ["sudo", "apt", "update", "&&", "sudo", "apt", "upgrade", "-y"]
     subprocess.run(update)
+
 
 def albanian_ht():
     clear_terminal()
@@ -260,6 +282,7 @@ def albanian_ht():
     subprocess.run(alhack_access)
     alhack_start = ["bash", "alhack.sh"]
     subprocess.run(alhack_start)
+
 
 def support_me():
     clear_terminal()
@@ -283,52 +306,53 @@ def support_me():
     webbrowser.open("https://github.com/Simit6155?tab=repositories")
 
 
-
-
 command = ""
 while command != "q":
     command = input(Fore.RED + "| > ")
+
     if command == "q":
         clear_terminal()
         print(Fore.GREEN + "closing program...")
         time.sleep(1)
         break
 
+    elif command == "1":
+        port_scanner()
+
+    elif command == "2":
+        geolocator()
+
+    elif command == "3":
+        kali_update()
+        osint_tool()
+
+    elif command == "4":
+        phone_caller()
+
+    elif command == "5":
+        spamm_bot()
+
+    elif command == "6":
+        kali_update()
+        zphisher()
+
+    elif command == "7":
+        kali_update()
+        cam_phish()
+
+    elif command == "8":
+        kali_update()
+        reverse_shell()
+
     elif command == "help":
         help()
 
-    elif command == "geo":
-        geolocator()
-
-    elif command == "cam":
-        cam_phish()
-
-    elif command == "osint":
-        osint_tool()
-
-    elif command == "call":
-        phone_caller()
-
-    elif command == "s port":
-        single_port_scanner()
-
-    elif command == "m port":
-        multi_port_scanner()
-
-    elif command == "spam":
-        spamm_bot()
-
-    elif command == "fish":
-        zphisher()
-
-    elif command == "rat":
-        reverse_shell()
-
-    elif command == "alhack":
-        albanian_ht()
-
     elif command == "support":
         support_me()
+
+    elif command == "99":
+        kali_update()
+        albanian_ht()
 
     else:
         print(Fore.RED + "[~] Unknown command... use command help to see available commands")
