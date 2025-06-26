@@ -1,66 +1,84 @@
-# 🛠️ RedSimit CyberToolKit 🧠💣
+# RedSimit MultiTool 🔧
 
-Welcome to **RedSimit CyberToolKit** – your all-in-one toolbox for educational cybersecurity experiments! 💻🧑‍💻  
-This project is built for **ethical hacking**, OSINT, and fun scripting challenges.  
-**⚠️ Use only in legal environments and with permission!**
+Welcome to **RedSimit MultiTool** — a Python-based Multi tool for ethical hackers. This script bundles together essential tools like a port scanner, spam bot, phishing toolkits, OSINT utilities, and more — all in one command-line interface.
 
----
-
-## ⚙️ Features & Commands
-
-🔍 **Networking**:
-╚═ m port = Scan multiple ports
-╚═ s port = Scan a single port
-╚═ osint = Info gathering (requires Kali)
-╚═ call = Anonymous call (BETA)
-╚═ geo = Open geolocator in browser
-
-markdown
-
-💣 **Attacking** *(for testing and educational use only)*:
-╚═ spam = Spam bot
-╚═ rat = Reverse shell (Kali)
-╚═ fish = Phishing tool (Kali)
-╚═ cam = Webcam hack simulator (Kali)
-
-markdown
-
-🔧 **Other**:
-╚═ q = Quit the tool
-╚═ support = Get help and support
-
+> ❗ **For educational use only.** Use responsibly and only on systems you own or have permission to test.
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Features
 
-1. **Clone the repo**:
-   ```bash
-   git clone https://github.com/Simit6155/Multi-Tool.git
-Run the tool:
+| ID  | Name                    | Description |
+|-----|-------------------------|-------------|
+| 1   | 🔍 Port Scanner          | Scan open/closed ports on a target IP |
+| 2   | 🌍 IP Geolocator         | Find approximate geolocation of an IP address |
+| 3   | 🕵️ OSINT + Update        | Sherlock username check + full Kali update |
+| 4   | ☎️ Phone Caller (GUI)    | Opens `callmyphone.org` and types the number |
+| 5   | 💬 Spam Bot              | Types and sends messages automatically using your cursor |
+| 6   | 🎣 Zphisher              | Clone and run the famous phishing toolkit |
+| 7   | 📸 CamPhish              | Fake webcam phishing simulation |
+| 8   | 🐚 Reverse Shell Launcher| Clone and start a listener for your own reverse shell |
+| 99  | 🔧 Albanian Hacking Tool | Clone and run AHT tool from GitHub |
+| help| ❓ Help                  | Display available commands |
+| support | Support Me           | Follow me and support development |
+| q   | ❌ Quit                  | Exit the tool |
 
-bash
-python3 cybertoolkit.py
-Make sure you’re using Kali Linux for full feature support.
+---
 
-📦 Requirements
-Python 3.x 🐍
+## 🛠️ Requirements
 
-Kali Linux (for certain modules) 🐲
+Make sure you have:
 
-Some tools require internet access 🌐
+- Python 3.7+
+- Git
+- A Unix-like system (Kali Linux recommended)
+- Installed Python modules:
+  ```bash
+  pip install colorama pyautogui requests
+🔧 Setup & Run
 
-🧠 Legal Disclaimer
-This tool is made for educational and ethical purposes only.
-You are responsible for using it in legal environments.
-The developer (Semih) is not liable for any misuse.
+git clone https://github.com/Simit6155/RedSimit-MultiTool.git
+cd RedSimit-MultiTool
+python3 main.py
 
-🌐 Follow Me & Support
+⚙️ Notes on Usage
 
-📸 Instagram: @redsimit
+    Spam Bot: Place your mouse cursor in the target input field (e.g., Discord, Notepad) and let it stay there. The bot will start typing and pressing Enter automatically.
 
-💬 Discord: https://discord.gg/FyKAf9crA4
+    Phone Caller: Do not move the mouse — it uses screen coordinates to click and type on callmyphone.org.
 
-⭐ Give a Star!
-If you like the project, drop a ⭐ on the repo to support future tools!
-> Author: **Semih (aka simit)** – young cybersecurity enthusiast from 🇹🇷
+    Zphisher/CamPhish: These tools will be cloned and executed inside the script.
+
+📚 Educational Purpose
+
+This toolkit is built for:
+
+    Practicing ethical hacking
+
+    Understanding tool automation with Python
+
+    Learning OSINT techniques
+
+    Simulating phishing environments (on your own devices)
+
+    Gaining experience with reverse shells and port scanning
+
+🙌 Support Me
+
+If you found this project helpful, support me by following:
+
+    📸 Instagram: @Redsimit
+
+    💬 Discord Server
+
+    💻 GitHub Profile
+
+    📦 My Other Projects
+
+⚠️ Disclaimer
+
+    I, the developer, am not responsible for any illegal use of this tool. This project is for educational and authorized penetration testing only. Always respect privacy and law.
+
+✅ License
+
+This project is licensed under the MIT License. Feel free to fork, improve, and share.
