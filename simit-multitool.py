@@ -7,8 +7,10 @@ import subprocess
 import os
 import colorama
 from colorama import Fore, init
-
 init(autoreset=True)
+
+
+
 
 
 def symbol_intro():
@@ -31,12 +33,14 @@ def available_commands():
           ╚═ [1] Port scanner                      ╚═ [5] Spammbot                   ╚═ q = quit
              [2] Geolocator                           [6] phishing // kali              help
              [3] Osint tool // kali                   [7] Webcam Hack // kali           support
-             [4] Prank call                           [8] Payload + Listener // kali    [99] ALHack // kali
+             [4] Prank call                           [8] Payload + Listener // kali [9] download my tools    
+             [99] ALHack // kali
 
         """)
-
-
+        
 available_commands()
+
+
 
 
 def help():
@@ -102,6 +106,7 @@ def geolocator():  # might not work well if you dont have good internet
     print(Fore.GREEN + "Latitude: " + str(latitude))
     print(Fore.GREEN + f"https://www.google.com/maps?q={latitude},{longitude}")
 
+
 def port_scanner():
     clear_terminal()
     choice = input(Fore.RED + """ 
@@ -109,6 +114,7 @@ def port_scanner():
 [2] Multi Port scanner
 
 | > """)
+
 
     if choice == "1":
         clear_terminal()
@@ -154,7 +160,7 @@ def port_scanner():
             """)
 
         print(
-            Fore.LIGHTGREEN_EX + "This Multi-Port tester was made by @Redsimit ")
+            Fore.LIGHTGREEN_EX + "This Multi-Port scanner was made by @Redsimit ")
         ip = input(Fore.GREEN + "Enter IP to scan: ")
         ports = [4444, 445, 443, 8080,
                  20, 21, 22, 23, 25, 53,
@@ -175,6 +181,7 @@ def port_scanner():
                 print(Fore.RED + f"Port {port} open ")
             except socket.error:
                 print(Fore.LIGHTBLACK_EX + f"Port {port} closed ")
+
 
 def spamm_bot():  # PUT YOUR CURSOR ON THE MESSAGE SENDING PLACE AND CLICK IT AND LET IT STAY THERE
     clear_terminal()
@@ -305,6 +312,29 @@ def support_me():
     webbrowser.open("https://github.com/Simit6155")
     webbrowser.open("https://github.com/Simit6155?tab=repositories")
 
+def install_mytools():
+    kali_update()
+    
+    port_repo = "https://github.com/Simit6155/Smart-Port-scanner.git"
+    port_clone = ["git", "clone", port_repo] 
+     subprocess.run(port_clone)
+     
+    spam_repo = "https://github.com/Simit6155/RedSpam.git"
+    spam_clone = ["git", "clone", spam_repo] 
+    subprocess.run(spam_clone)
+    
+    redshell_rep = "https://github.com/Simit6155/SchimmelBox-Warriors.git"
+    redshell_clone = ["git", "clone", redshell_repo] 
+    subprocess.run(redshell_clone)
+    
+    autoclicker_rep = "https://github.com/Simit6155/Auto-Clicker.git"
+    autoclicker_clone = ["git", "clone",     autoclicker_rep]
+    subprocess.run(autoclicker_clone)
+    
+    geolocator_rep = "https://github.com/Simit6155/GeoLocator.git"
+    geolocator_clone = ("git", "clone", geolocator_rep)
+       subprocess.run(geolocator_clone)
+       
 try:
     command = ""
     while command != "q":
@@ -344,6 +374,9 @@ try:
             kali_update()
             reverse_shell()
 
+        elif command == "9":
+             install_mytools()
+             
         elif command == "help":
             help()
 
@@ -364,3 +397,12 @@ except KeyboardInterrupt:
     print(Fore.RED + "[!] Closing in [1]")
     time.sleep(1)
     print(Fore.RED + "[!] Closing . . . ")
+    break
+
+
+
+
+
+
+#Dear Reader only God knows how this works and why it works
+#I dont recommend trying to change this code
