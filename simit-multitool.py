@@ -28,10 +28,10 @@ def available_commands():
     print(Fore.GREEN + """
         Available commands: ═══════════════════╗═══════════════════════════════════════╗
         ╚═ Networking:                         ╚═ Attacking:                           ╚═ Other:
-          ╚═ [1] Port scanner                      ╚═ [5] Spammbot                   ╚═ q = quit
-             [2] Geolocator                           [6] phishing // kali              help
-             [3] Osint tool // kali                   [7] Webcam Hack // kali           support
-             [4] Prank call                           [8] Payload + Listener // kali [9] download my tools    
+          ╚═ [1] Port scanner                      ╚═ [5] Spammbot                        ╚═ q = quit
+             [2] Geolocator                           [6] phishing // kali                   help
+             [3] Osint tool // kali                   [7] Webcam Hack // kali                support
+             [4] Prank call                           [8] Payload + Listener // kali         [9]download my tools    
              [99] ALHack // kali
 
         """)
@@ -319,15 +319,15 @@ def install_mytools():
     spam_repo = "https://github.com/Simit6155/RedSpam.git"
     spam_clone = ["git", "clone", spam_repo]
     subprocess.run(spam_clone)
-    
+
     redshell_repo = "https://github.com/Simit6155/SchimmelBox-Warriors.git"
     redshell_clone = ["git", "clone", redshell_repo]
     subprocess.run(redshell_clone)
-    
+
     autoclicker_repo = "https://github.com/Simit6155/Auto-Clicker.git"
     autoclicker_clone = ["git", "clone", autoclicker_repo]
     subprocess.run(autoclicker_clone)
-    
+
     geolocator_repo = "https://github.com/Simit6155/GeoLocator.git"
     geolocator_clone = ("git", "clone", geolocator_repo)
     subprocess.run(geolocator_clone)
