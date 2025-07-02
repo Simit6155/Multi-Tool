@@ -7,10 +7,8 @@ import subprocess
 import os
 import colorama
 from colorama import Fore, init
+
 init(autoreset=True)
-
-
-
 
 
 def symbol_intro():
@@ -37,10 +35,9 @@ def available_commands():
              [99] ALHack // kali
 
         """)
-        
+
+
 available_commands()
-
-
 
 
 def help():
@@ -115,7 +112,6 @@ def port_scanner():
 
 | > """)
 
-
     if choice == "1":
         clear_terminal()
         print(Fore.BLUE + """
@@ -137,7 +133,7 @@ def port_scanner():
         time.sleep(2)
 
         try:
-            socket.create_connection((ip, port), timeout=4)  # you can change the timeout if you want cuz its kinda long
+            socket.create_connection((ip, port), timeout=3)  # you can change the timeout if you want cuz its kinda long
             print(Fore.GREEN + "port is open")
         except socket.error:
             print(Fore.GREEN + "port is closed")
@@ -251,7 +247,7 @@ def osint_tool():
     subprocess.run(start_sherlock)
 
 
-def phone_caller():  # Might not work if your monitor doesent match the coordinates (DONT MOVE YOUR MOUSE)
+def phone_caller():  # Might not work if your monitor does not match the coordinates because it uses pyautogui to click the coordinates (DONT MOVE YOUR MOUSE)
     clear_terminal()
     print(Fore.RED + """
             ▄▄▄·    ▄▄·  ▄▄▄· ▄▄▌  ▄▄▌  ▄▄▄ .▄▄▄  
@@ -312,29 +308,31 @@ def support_me():
     webbrowser.open("https://github.com/Simit6155")
     webbrowser.open("https://github.com/Simit6155?tab=repositories")
 
+
 def install_mytools():
     kali_update()
-    
+
     port_repo = "https://github.com/Simit6155/Smart-Port-scanner.git"
-    port_clone = ["git", "clone", port_repo] 
-     subprocess.run(port_clone)
-     
+    port_clone = ["git", "clone", port_repo]
+    subprocess.run(port_clone)
+
     spam_repo = "https://github.com/Simit6155/RedSpam.git"
-    spam_clone = ["git", "clone", spam_repo] 
+    spam_clone = ["git", "clone", spam_repo]
     subprocess.run(spam_clone)
     
-    redshell_rep = "https://github.com/Simit6155/SchimmelBox-Warriors.git"
-    redshell_clone = ["git", "clone", redshell_repo] 
+    redshell_repo = "https://github.com/Simit6155/SchimmelBox-Warriors.git"
+    redshell_clone = ["git", "clone", redshell_repo]
     subprocess.run(redshell_clone)
     
-    autoclicker_rep = "https://github.com/Simit6155/Auto-Clicker.git"
-    autoclicker_clone = ["git", "clone",     autoclicker_rep]
+    autoclicker_repo = "https://github.com/Simit6155/Auto-Clicker.git"
+    autoclicker_clone = ["git", "clone", autoclicker_repo]
     subprocess.run(autoclicker_clone)
     
-    geolocator_rep = "https://github.com/Simit6155/GeoLocator.git"
-    geolocator_clone = ("git", "clone", geolocator_rep)
-       subprocess.run(geolocator_clone)
-       
+    geolocator_repo = "https://github.com/Simit6155/GeoLocator.git"
+    geolocator_clone = ("git", "clone", geolocator_repo)
+    subprocess.run(geolocator_clone)
+
+
 try:
     command = ""
     while command != "q":
@@ -375,8 +373,8 @@ try:
             reverse_shell()
 
         elif command == "9":
-             install_mytools()
-             
+            install_mytools()
+
         elif command == "help":
             help()
 
@@ -397,12 +395,3 @@ except KeyboardInterrupt:
     print(Fore.RED + "[!] Closing in [1]")
     time.sleep(1)
     print(Fore.RED + "[!] Closing . . . ")
-    break
-
-
-
-
-
-
-#Dear Reader only God knows how this works and why it works
-#I dont recommend trying to change this code
