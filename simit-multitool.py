@@ -11,6 +11,9 @@ from colorama import Fore, init
 init(autoreset=True)
 
 
+
+
+
 def symbol_intro():
     print(Fore.RED + "               ██████╗ ███████╗██████╗ ███████╗██╗███╗   ███╗██╗████████╗")
     print(Fore.RED + "               ██╔══██╗██╔════╝██╔══██╗██╔════╝██║████╗ ████║██║╚══██╔══╝")
@@ -32,8 +35,8 @@ def available_commands():
              [2] Geolocator                           [6] phishing // kali                   help
              [3] Osint tool // kali                   [7] Webcam Hack // kali                support
              [4] Prank call                           [8] Payload + Listener // kali         [9]download my tools    
-             [99] ALHack // kali
-
+                                                      [10] Metasploit + custom exploit       [99] ALHack // kali
+        
         """)
 
 
@@ -289,6 +292,7 @@ def albanian_ht():
 
 def support_me():
     clear_terminal()
+    
     print(Fore.BLUE + """
                                      ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄    ▄  ▄▄▄▄▄▄▄▄▄▄▄ 
                                     ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░▌  ▐░▌▐░░░░░░░░░░░▌
@@ -310,7 +314,7 @@ def support_me():
 
 
 def install_mytools():
-    kali_update()
+    clear_terminal()
 
     port_repo = "https://github.com/Simit6155/Smart-Port-scanner.git"
     port_clone = ["git", "clone", port_repo]
@@ -331,6 +335,24 @@ def install_mytools():
     geolocator_repo = "https://github.com/Simit6155/GeoLocator.git"
     geolocator_clone = ("git", "clone", geolocator_repo)
     subprocess.run(geolocator_clone)
+    
+    webbrowser.open("https://github.com/Simit6155")
+
+
+def custom_sploit():
+    clear_terminal()
+
+    print(Fore.RED + "Installing . . . ")
+    metasploit_repo = "https://github.com/rapid7/metasploit-framework.git"
+    metasploit_clone = ["git", "clone", metasploit_repo]
+    subprocess.run(metasploit_clone)
+
+    custom_exploit_repo = "https://github.com/FOLKS-iwd/CVE-2025-24071-msfvenom?tab=readme-ov-file"
+    custom_exploit_clone = ["git", "clone", custom_exploit_repo]
+    subprocess.run(custom_exploit_clone)
+
+    run_meta = "msfconsole"
+    subprocess.run(run_meta)
 
 
 try:
@@ -373,7 +395,12 @@ try:
             reverse_shell()
 
         elif command == "9":
+            kali_update()
             install_mytools()
+
+        elif command == "10":
+            kali_update()
+            custom_sploit()
 
         elif command == "help":
             help()
@@ -388,7 +415,10 @@ try:
         else:
             print(Fore.RED + "[~] Unknown command... use command help to see available commands")
 
+
 except KeyboardInterrupt:
+    clear_terminal()
+
     print(Fore.RED + """
 [!] Keyboard interrupt detected. Closing in [2]""")
     time.sleep(1)
