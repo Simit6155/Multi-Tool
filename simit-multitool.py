@@ -32,10 +32,10 @@ def available_commands():
         Available commands: ═══════════════════╗═══════════════════════════════════════╗
         ╚═ Networking:                         ╚═ Attacking:                           ╚═ Other:
           ╚═ [1] Port scanner                      ╚═ [5] Spammbot                        ╚═ q = quit
-             [2] Geolocator                           [6] phishing // kali                   help
-             [3] Osint tool // kali                   [7] Webcam Hack // kali                support
-             [4] Prank call                           [8] Payload + Listener // kali         [9]download my tools    
-                                                      [10] Metasploit + custom exploit       [99] ALHack // kali
+             [2] Geolocator                           [6] phishing                           help
+             [3] Osint tool                           [7] Webcam Hack                        support
+             [4] Prank call                           [8] Payload + Listener                 [9]download my tools    
+                                                      [10] Metasploit + custom exploit       [99] ALHack 
         
         """)
 
@@ -292,7 +292,7 @@ def albanian_ht():
 
 def support_me():
     clear_terminal()
-    
+
     print(Fore.BLUE + """
                                      ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄    ▄  ▄▄▄▄▄▄▄▄▄▄▄ 
                                     ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░▌  ▐░▌▐░░░░░░░░░░░▌
@@ -335,7 +335,7 @@ def install_mytools():
     geolocator_repo = "https://github.com/Simit6155/GeoLocator.git"
     geolocator_clone = ("git", "clone", geolocator_repo)
     subprocess.run(geolocator_clone)
-    
+
     webbrowser.open("https://github.com/Simit6155")
 
 
@@ -369,38 +369,76 @@ try:
         elif command == "1":
             port_scanner()
 
+
         elif command == "2":
             geolocator()
 
+
         elif command == "3":
-            kali_update()
-            osint_tool()
+            try:
+                kali_update()
+                osint_tool()
+            except:
+                printf("""
+[-] Error: Linux needed
+[-] Try another command """)
+
 
         elif command == "4":
             phone_caller()
 
         elif command == "5":
-            spamm_bot()
+                spamm_bot()
+
 
         elif command == "6":
-            kali_update()
-            zphisher()
+            try:
+                kali_update()
+                zphisher()
+            except:
+                printf("""
+[-] Error: Linux needed
+[-] Try another command """)
 
         elif command == "7":
-            kali_update()
-            cam_phish()
+            try:
+                kali_update()
+                cam_phish()
+            except:
+                printf("""
+            [-] Error: Linux needed
+            [-] Try another command """)
+
 
         elif command == "8":
-            kali_update()
-            reverse_shell()
+            try:
+                kali_update()
+                reverse_shell()
+            except:
+                printf("""
+[-] Error: Linux needed
+[-] Try another command """)
+
 
         elif command == "9":
-            kali_update()
-            install_mytools()
+            try:
+                kali_update()
+                install_mytools()
+            except:
+                printf("""
+[-] Error: Linux needed
+[-] Try another command """)
+
 
         elif command == "10":
-            kali_update()
-            custom_sploit()
+            try:
+                kali_update()
+                custom_sploit()
+            except:
+                printf("""
+[-] Error: Linux needed
+[-] Try another command """)
+
 
         elif command == "help":
             help()
@@ -409,8 +447,15 @@ try:
             support_me()
 
         elif command == "99":
-            kali_update()
-            albanian_ht()
+            try:
+                kali_update()
+                albanian_ht()
+
+            except:
+                printf("""
+[-] Error: Linux needed
+[-] Try another command """)
+
 
         else:
             print(Fore.RED + "[~] Unknown command... use command help to see available commands")
