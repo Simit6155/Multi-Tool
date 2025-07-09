@@ -1,3 +1,4 @@
+import sys
 import time
 import socket
 import pyautogui
@@ -35,9 +36,9 @@ def available_commands():
              [2] Geolocator                           [6] phishing                           help
              [3] Osint tool                           [7] Webcam Hack                        support
              [4] Prank call                           [8] Payload + Listener                 [9]download my tools    
-                                                      [10] Metasploit + custom exploit    [11] Join discord   [99] ALHack 
-        
-        """)
+                                                      [10] Metasploit + custom exploit       [11] Join discord  
+                                                                                             [99] ALHack 
+        """)                                
 
 
 available_commands()
@@ -48,14 +49,14 @@ def help():
     available_commands()
 
 
-def clear_terminal():  # clears the terminal
+def clear_terminal():
     if os.name == "nt":
         os.system("cls")
     else:
         os.system("clear")
 
 
-def geolocator():  # might not work well if you dont have good internet
+def geolocator():
     clear_terminal()
     print(Fore.RED + """
                          ▄████  ▓█████   ▒█████    ██████   ██▓  ███▄ ▄███▓  ██▓▄▄ ▄█████▓
@@ -101,7 +102,6 @@ def geolocator():  # might not work well if you dont have good internet
     print(Fore.GREEN + "ASN: " + asn)
     print(Fore.GREEN + "Languages: " + languages)
     print(Fore.GREEN + "Country_area: " + str(country_area))
-
     print(Fore.GREEN + "Longitude: " + str(longitude))
     print(Fore.GREEN + "Latitude: " + str(latitude))
     print(Fore.GREEN + f"https://www.google.com/maps?q={latitude},{longitude}")
@@ -114,6 +114,7 @@ def port_scanner():
 [2] Multi Port scanner
 
 | > """)
+
 
     if choice == "1":
         clear_terminal()
@@ -128,7 +129,6 @@ def port_scanner():
  ▄████████▀  █▀    ▀█   █▀    ████████▀  █████▄▄██   ██████████  ▄████▀       ▀██████▀    ███    ███    ▄████▀     ██████████   ███    ███ 
                                          ▀                                                ███    ███                            ███    ███         
             """)
-            
         print(Fore.LIGHTBLUE_EX + "THIS PORT TESTER WAS MADE BY @REDSIMIT")
         ip = input(Fore.GREEN + "IP to scan: ")
         port = int(input(Fore.GREEN + "Input the following port: "))
@@ -137,14 +137,15 @@ def port_scanner():
         time.sleep(2)
 
         try:
-            socket.create_connection((ip, port), timeout=3)  # you can change the timeout if you want cuz its kinda long
+            socket.create_connection((ip, port), timeout=3)
             print(Fore.GREEN + "port is open")
+            
         except socket.error:
             print(Fore.GREEN + "port is closed")
 
+
     elif choice == "2":
         clear_terminal()
-        
         print(Fore.GREEN + """
  ▄▄       ▄▄  ▄         ▄  ▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄  ▄  ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
 ▐░░▌     ▐░░▌▐░▌       ▐░▌▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌▐░▌▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
@@ -157,34 +158,23 @@ def port_scanner():
 ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▄▄▄▄█░█▄▄▄▄  ▐░▐░▌░▌ ▐░▌          ▐░█▄▄▄▄▄▄▄█░▌▐░▌      ▐░▌      ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▐░▌ 
 ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌     ▐░░░░░░░░░░░▌▐░▌▐░▌▐░▌▐░▌          ▐░░░░░░░░░░░▌▐░▌       ▐░▌     ▐░▌     ▐░░░░░░░░░░░▌▐░▌       ▐░▌
  ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀  ▀  ▀  ▀            ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀ 
-
             """)
-
-        print(
-            Fore.LIGHTGREEN_EX + "This Multi-Port scanner was made by @Redsimit ")
+        print(Fore.LIGHTGREEN_EX + "This Multi-Port scanner was made by @Redsimit ")
         ip = input(Fore.GREEN + "Enter IP to scan: ")
-        ports = [4444, 445, 443, 8080,
-                 20, 21, 22, 23, 25, 53,
-                 68, 80, 110, 123, 135, 67,
-                 137, 138, 139, 143, 161,
-                 162, 389, 443, 445, 465,
-                 514, 587, 636, 993, 995,
-                 1080, 1433, 1521, 1723,
-                 2049, 2121, 3306, 3389,
-                 5432, 5900, 6000, 8080,
-                 8443, 8888, 10000, 20000,
-                 32768, 49152, 65535]
+        ports = [4444, 445, 443, 8080, 20, 21, 22, 23, 25, 53, 68, 80, 110, 123, 135, 67, 137, 138, 139, 143, 161, 162,
+                 389, 443, 445, 465, 514, 587, 636, 993, 995, 1080, 1433, 1521, 1723, 2049, 2121, 3306, 3389, 5432,
+                 5900, 6000, 8080, 8443, 8888, 10000, 20000, 32768, 49152, 65535]
 
         for port in ports:
             try:
-                socket.create_connection((ip, port),
-                                         timeout=1)  # i recommend changing the timeout to 2 or 3 if you want to be sure
+                socket.create_connection((ip, port), timeout=1)
                 print(Fore.RED + f"Port {port} open ")
+                
             except socket.error:
                 print(Fore.LIGHTBLACK_EX + f"Port {port} closed ")
 
 
-def spamm_bot():  # PUT YOUR CURSOR ON THE MESSAGE SENDING PLACE AND CLICK IT AND LET IT STAY THERE
+def spamm_bot():
     clear_terminal()
     print(Fore.YELLOW + """
                         ▄▀▀█▄▄   ▄▀▀█▄▄▄▄  ▄▀▀▀▀▄  ▄▀▀▀█▀▀▄  ▄▀▀▄▀▀▀▄  ▄▀▀▀▀▄   ▄▀▀▄ ▀▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄▀▀▀▄ 
@@ -201,6 +191,7 @@ def spamm_bot():  # PUT YOUR CURSOR ON THE MESSAGE SENDING PLACE AND CLICK IT AN
     print(Fore.GREEN + "Put your mouse on the place to spamm the messages!")
     time.sleep(3)
     print("SENDING MESSAGES... ")
+    
     a = 1
     while a <= int(limit):
         pyautogui.typewrite(word)
@@ -211,6 +202,8 @@ def spamm_bot():  # PUT YOUR CURSOR ON THE MESSAGE SENDING PLACE AND CLICK IT AN
 
 def reverse_shell():
     clear_terminal()
+    kali_update()
+    
     print(Fore.RED + "INSTALLING THE TOOL (enter to continue) ")
     time.sleep(0.5)
     repo = "https://github.com/Simit6155/SchimmelBox-Warriors.git"
@@ -224,9 +217,12 @@ def reverse_shell():
 
 def zphisher():
     clear_terminal()
+    kali_update()
+    
     phish_repo = "https://github.com/htr-tech/zphisher.git"
     phish_clone = ["git", "clone", phish_repo]
     subprocess.run(phish_clone)
+    
     os.chdir("zphisher")
     mod_phish = ["chmod", "+x", "zphisher.sh"]
     subprocess.run(mod_phish)
@@ -236,9 +232,12 @@ def zphisher():
 
 def cam_phish():
     clear_terminal()
+    kali_update()
+    
     cam_repo = "https://github.com/techchipnet/CamPhish.git"
     cam_clone = ["git", "clone", cam_repo]
     subprocess.run(cam_clone)
+    
     os.chdir("CamPhish")
     mod_cam = ["chmod", "+x", "CamPhish.sh"]
     subprocess.run(mod_cam)
@@ -248,11 +247,13 @@ def cam_phish():
 
 def osint_tool():
     clear_terminal()
+    kali_update()
+    
     start_sherlock = ["sherlock", "-h"]
     subprocess.run(start_sherlock)
 
 
-def phone_caller():  # Might not work if your monitor does not match the coordinates because it uses pyautogui to click the coordinates (DONT MOVE YOUR MOUSE)
+def phone_caller():
     clear_terminal()
     
     print(Fore.RED + """
@@ -261,7 +262,6 @@ def phone_caller():  # Might not work if your monitor does not match the coordin
              ██▀·   ██ ▄▄▄█▀▀█ ██▪  ██▪  ▐▀▀▪▄▐▀▀▄ 
             ▐█▪·•   ▐███▌▐█ ▪▐▌▐█▌▐▌▐█▌▐▌▐█▄▄▌▐█•█▌
             .▀    ▀ ·▀▀▀  ▀  ▀ .▀▀▀ .▀▀▀  ▀▀▀ .▀  ▀""")
-
     print(Fore.RED + "~~~~ Author @Redsimit ~~~~ ")
     number = input(Fore.GREEN + "Enter number: ")
     print(Fore.GREEN + "Calling dont move your mouse . . . . ")
@@ -297,7 +297,7 @@ def albanian_ht():
 
 def support_me():
     clear_terminal()
-
+    
     print(Fore.BLUE + """
                                      ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄    ▄  ▄▄▄▄▄▄▄▄▄▄▄ 
                                     ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░▌  ▐░▌▐░░░░░░░░░░░▌
@@ -310,7 +310,6 @@ def support_me():
                                          ▐░▌     ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌     ▐░▐░▌▐░▌ ▐░▌  ▄▄▄▄▄▄▄▄▄█░▌
                                          ▐░▌     ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌      ▐░░▌▐░▌  ▐░▌▐░░░░░░░░░░░▌
                                           ▀       ▀         ▀  ▀         ▀  ▀        ▀▀  ▀    ▀  ▀▀▀▀▀▀▀▀▀▀▀ 
-
     """)
     
     webbrowser.open("https://www.instagram.com/Redsimit")
@@ -321,7 +320,8 @@ def support_me():
 
 def install_mytools():
     clear_terminal()
-
+    kali_update()
+    
     port_repo = "https://github.com/Simit6155/Smart-Port-scanner.git"
     port_clone = ["git", "clone", port_repo]
     subprocess.run(port_clone)
@@ -341,14 +341,14 @@ def install_mytools():
     geolocator_repo = "https://github.com/Simit6155/GeoLocator.git"
     geolocator_clone = ("git", "clone", geolocator_repo)
     subprocess.run(geolocator_clone)
-    
-    
+
     webbrowser.open("https://github.com/Simit6155")
 
 
 def custom_sploit():
     clear_terminal()
-
+    kali_update()
+    
     print(Fore.RED + "Installing . . . ")
     metasploit_repo = "https://github.com/rapid7/metasploit-framework.git"
     metasploit_clone = ["git", "clone", metasploit_repo]
@@ -362,7 +362,7 @@ def custom_sploit():
     subprocess.run(run_meta)
 
 
-    def outro():
+def outro():
     webbrowser.open("https://discord.gg/FyKAf9crA4")
 
 
@@ -370,114 +370,111 @@ try:
     command = ""
     while command != "q":
         command = input(Fore.RED + "| > ")
-        
 
         if command == "q":
             clear_terminal()
+            
             print(Fore.GREEN + "closing program...")
             time.sleep(1)
             break
-
-
+            
+            
         elif command == "1":
             try:
                 port_scanner()
-           except:
+                
+            except:
                 print(Fore.RED + "Error occurred. Closing")
-
-
+                
+                
         elif command == "2":
             try:
                 geolocator()
                 
-           except:
+            except:
                 print(Fore.RED + "Error occurred. Closing")
-
-
+                
+                
         elif command == "3":
             try:
-                kali_update()
                 osint_tool()
                 
             except:
-                printf("""
+                print("""
 [-] Error: Linux needed
 [-] Try another command """)
-
-
+                
+                
         elif command == "4":
             try:
                 phone_caller()
-           except:
+                
+            except:
                 print(Fore.RED + "Error occurred. Closing")
-            
-
+                
+                
         elif command == "5":
-                try:
-                    spamm_bot()
-                    
-              except:
+            try:
+                spamm_bot()
+                
+            except:
                 print(Fore.RED + "Error occurred. Closing")
-
-
+                
+                
         elif command == "6":
             try:
-                kali_update()
                 zphisher()
                 
             except:
-                printf("""
+                print("""
 [-] Error: Linux needed
 [-] Try another command """)
-
+                
+                
         elif command == "7":
             try:
-                kali_update()
                 cam_phish()
                 
             except:
-                printf("""
-            [-] Error: Linux needed
-            [-] Try another command """)
-
-
+                print("""
+[-] Error: Linux needed
+[-] Try another command """)
+                
+                
         elif command == "8":
             try:
-                kali_update()
                 reverse_shell()
                 
             except:
-                printf("""
+                print("""
 [-] Error: Linux needed
 [-] Try another command """)
-
-
+                
+                
         elif command == "9":
             try:
-                kali_update()
                 install_mytools()
                 
             except:
-                printf("""
+                print("""
 [-] Error: Linux needed
 [-] Try another command """)
-
-
+                
+                
         elif command == "10":
             try:
-                kali_update()
                 custom_sploit()
                 
             except:
-                printf("""
+                print("""
 [-] Error: Linux needed
 [-] Try another command """)
-
-
+                
+                
         elif command == "11":
             try:
                 outro()
-            
+
             except:
                 print(Fore.RED + "Error occurred. Closing")
 
@@ -485,7 +482,7 @@ try:
         elif command == "help":
             try:
                 help()
-                
+
             except:
                 print(Fore.RED + "Error occurred. Closing")
 
@@ -493,37 +490,28 @@ try:
         elif command == "support":
             try:
                 support_me()
-                
+
             except:
                 print(Fore.RED + "Error occurred. Closing")
 
 
         elif command == "99":
             try:
-                clear()
-                kali_update()
+                clear_terminal()
                 albanian_ht()
 
             except:
-                printf("""
+                 print("""
 [-] Error: Linux needed
 [-] Try another command """)
 
 
         else:
-            print(Fore.RED + "[~] Unknown command... use command help to see available commands")
-
-
+             print(Fore.RED + "[~] Unknown command... use command help to see available commands")
 
 except KeyboardInterrupt:
-    clear_terminal()
-
-    print(Fore.RED + """
-[!] Keyboard interrupt detected. Closing in [2]""")
-    time.sleep(1)
-    
-    print(Fore.RED + "[!] Closing in [1]")
-    time.sleep(1)
-    
-    print(Fore.RED + "[!] Closing . . . ")
-    time.sleep(0.5)
+     clear_terminal()
+     
+     print(Fore.RED + """
+[!] Keyboard interrupt detected. Closing """)
+     sys.exit()
