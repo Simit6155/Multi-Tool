@@ -82,3 +82,5 @@ If you found this project helpful, support me by following:
 ✅ License
 
 This project is licensed under the MIT License. Feel free to fork, improve, and share.
+
+btw im stopping uploading executables since github doesent let me since its getting larger
