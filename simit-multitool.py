@@ -35,7 +35,7 @@ def available_commands():
              [2] Geolocator                           [6] phishing                           help
              [3] Osint tool                           [7] Webcam Hack                        support
              [4] Prank call                           [8] Payload + Listener                 [9]download my tools    
-                                                      [10] Metasploit + custom exploit       [99] ALHack 
+                                                      [10] Metasploit + custom exploit    [11] Join discord   [99] ALHack 
         
         """)
 
@@ -128,6 +128,7 @@ def port_scanner():
  ▄████████▀  █▀    ▀█   █▀    ████████▀  █████▄▄██   ██████████  ▄████▀       ▀██████▀    ███    ███    ▄████▀     ██████████   ███    ███ 
                                          ▀                                                ███    ███                            ███    ███         
             """)
+            
         print(Fore.LIGHTBLUE_EX + "THIS PORT TESTER WAS MADE BY @REDSIMIT")
         ip = input(Fore.GREEN + "IP to scan: ")
         port = int(input(Fore.GREEN + "Input the following port: "))
@@ -143,6 +144,7 @@ def port_scanner():
 
     elif choice == "2":
         clear_terminal()
+        
         print(Fore.GREEN + """
  ▄▄       ▄▄  ▄         ▄  ▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄  ▄  ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
 ▐░░▌     ▐░░▌▐░▌       ▐░▌▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌▐░▌▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
@@ -252,6 +254,7 @@ def osint_tool():
 
 def phone_caller():  # Might not work if your monitor does not match the coordinates because it uses pyautogui to click the coordinates (DONT MOVE YOUR MOUSE)
     clear_terminal()
+    
     print(Fore.RED + """
             ▄▄▄·    ▄▄·  ▄▄▄· ▄▄▌  ▄▄▌  ▄▄▄ .▄▄▄  
             ▐█ ▄█   ▐█ ▌▪▐█ ▀█ ██•  ██•  ▀▄.▀·▀▄ █·
@@ -273,6 +276,7 @@ def phone_caller():  # Might not work if your monitor does not match the coordin
 
 def kali_update():
     clear_terminal()
+    
     update = ["sudo", "apt", "update", "&&", "sudo", "apt", "upgrade", "-y"]
     subprocess.run(update)
 
@@ -280,6 +284,7 @@ def kali_update():
 def albanian_ht():
     clear_terminal()
     kali_update()
+    
     aht_repo = "https://github.com/AlbanianCyberArmy/Albanian-Hacking-Tool.git"
     aht_clone = ["git", "clone", aht_repo]
     subprocess.run(aht_clone)
@@ -307,6 +312,7 @@ def support_me():
                                           ▀       ▀         ▀  ▀         ▀  ▀        ▀▀  ▀    ▀  ▀▀▀▀▀▀▀▀▀▀▀ 
 
     """)
+    
     webbrowser.open("https://www.instagram.com/Redsimit")
     webbrowser.open("https://discord.gg/FyKAf9crA4")
     webbrowser.open("https://github.com/Simit6155")
@@ -335,7 +341,8 @@ def install_mytools():
     geolocator_repo = "https://github.com/Simit6155/GeoLocator.git"
     geolocator_clone = ("git", "clone", geolocator_repo)
     subprocess.run(geolocator_clone)
-
+    
+    
     webbrowser.open("https://github.com/Simit6155")
 
 
@@ -355,10 +362,15 @@ def custom_sploit():
     subprocess.run(run_meta)
 
 
+    def outro():
+    webbrowser.open("https://discord.gg/FyKAf9crA4")
+
+
 try:
     command = ""
     while command != "q":
         command = input(Fore.RED + "| > ")
+        
 
         if command == "q":
             clear_terminal()
@@ -366,18 +378,27 @@ try:
             time.sleep(1)
             break
 
+
         elif command == "1":
-            port_scanner()
+            try:
+                port_scanner()
+           except:
+                print(Fore.RED + "Error occurred. Closing")
 
 
         elif command == "2":
-            geolocator()
+            try:
+                geolocator()
+                
+           except:
+                print(Fore.RED + "Error occurred. Closing")
 
 
         elif command == "3":
             try:
                 kali_update()
                 osint_tool()
+                
             except:
                 printf("""
 [-] Error: Linux needed
@@ -385,16 +406,25 @@ try:
 
 
         elif command == "4":
-            phone_caller()
+            try:
+                phone_caller()
+           except:
+                print(Fore.RED + "Error occurred. Closing")
+            
 
         elif command == "5":
-                spamm_bot()
+                try:
+                    spamm_bot()
+                    
+              except:
+                print(Fore.RED + "Error occurred. Closing")
 
 
         elif command == "6":
             try:
                 kali_update()
                 zphisher()
+                
             except:
                 printf("""
 [-] Error: Linux needed
@@ -404,6 +434,7 @@ try:
             try:
                 kali_update()
                 cam_phish()
+                
             except:
                 printf("""
             [-] Error: Linux needed
@@ -414,6 +445,7 @@ try:
             try:
                 kali_update()
                 reverse_shell()
+                
             except:
                 printf("""
 [-] Error: Linux needed
@@ -424,6 +456,7 @@ try:
             try:
                 kali_update()
                 install_mytools()
+                
             except:
                 printf("""
 [-] Error: Linux needed
@@ -434,20 +467,40 @@ try:
             try:
                 kali_update()
                 custom_sploit()
+                
             except:
                 printf("""
 [-] Error: Linux needed
 [-] Try another command """)
 
 
+        elif command == "11":
+            try:
+                outro()
+            
+            except:
+                print(Fore.RED + "Error occurred. Closing")
+
+
         elif command == "help":
-            help()
+            try:
+                help()
+                
+            except:
+                print(Fore.RED + "Error occurred. Closing")
+
 
         elif command == "support":
-            support_me()
+            try:
+                support_me()
+                
+            except:
+                print(Fore.RED + "Error occurred. Closing")
+
 
         elif command == "99":
             try:
+                clear()
                 kali_update()
                 albanian_ht()
 
@@ -461,12 +514,16 @@ try:
             print(Fore.RED + "[~] Unknown command... use command help to see available commands")
 
 
+
 except KeyboardInterrupt:
     clear_terminal()
 
     print(Fore.RED + """
 [!] Keyboard interrupt detected. Closing in [2]""")
     time.sleep(1)
+    
     print(Fore.RED + "[!] Closing in [1]")
     time.sleep(1)
+    
     print(Fore.RED + "[!] Closing . . . ")
+    time.sleep(0.5)
