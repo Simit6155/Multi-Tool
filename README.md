@@ -1,86 +1,99 @@
-# RedSimit MultiTool 🔧
+# Redsimit Multi-Tool
 
-Welcome to **RedSimit MultiTool** — a Python-based Multi tool for ethical hackers. This script bundles together essential tools like a port scanner, spam bot, phishing toolkits, OSINT utilities, and more — all in one command-line interface.
-
-> ❗ **For educational use only.** Use responsibly and only on systems you own or have permission to test.
-
----
-
-## 🚀 Features
-
-| ID  | Name                    | Description |
-|-----|-------------------------|-------------|
-| 1   | 🔍 Port Scanner          | Scan open/closed ports on a target IP |
-| 2   | 🌍 IP Geolocator         | Find approximate geolocation of an IP address |
-| 3   | 🕵️ OSINT + Update        | Sherlock username check + full Kali update |
-| 4   | ☎️ Phone Caller (GUI)    | Opens `callmyphone.org` and types the number |
-| 5   | 💬 Spam Bot              | Types and sends messages automatically using your cursor |
-| 6   | 🎣 Zphisher              | Clone and run the famous phishing toolkit |
-| 7   | 📸 CamPhish              | Fake webcam phishing simulation |
-| 8   | 🐚 Reverse Shell Launcher| Clone and start a listener for your own reverse shell |
-| 99  | 🔧 Albanian Hacking Tool | Clone and run AHT tool from GitHub |
-| help| ❓ Help                  | Display available commands |
-| support | Support Me           | Follow me and support development |
-| q   | ❌ Quit                  | Exit the tool |
+![Redsimit Banner](https://raw.githubusercontent.com/Simit6155/your-repo/main/banner.png)  
+*Made by @Redsimit*
 
 ---
 
-## 🛠️ Requirements
+## Overview
 
-Make sure you have:
+Redsimit Multi-Tool is a modular Python-based toolkit designed for penetration testing, OSINT investigations, and security research.  
+It includes tools for port scanning, IP geolocation, phishing setup, reverse shell management, and more — all accessible through a simple CLI interface.
 
-- Python 3.7+
-- Git
-- A Unix-like system (Kali Linux recommended)
-- Installed Python modules:
-  ```bash
-  pip install colorama pyautogui requests
-🔧 Setup & Run
+> **Note:** This tool is for educational and authorized testing purposes only. Use responsibly and legally.
 
-git clone https://github.com/Simit6155/RedSimit-MultiTool.git
-cd RedSimit-MultiTool
-python3 main.py
+---
 
-⚙️ Notes on Usage
+## Features
 
-    Spam Bot: Place your mouse cursor in the target input field (e.g., Discord, Notepad) and let it stay there. The bot will start typing and pressing Enter automatically.
+- **Networking:**  
+  - Single and Multi-port scanner  
+  - IP Geolocator via `ipapi.co`  
+- **OSINT Tools:**  
+  - Sherlock username lookup  
+- **Attack Tools:**  
+  - Spam bot (automated typing spamming messages)  
+  - Phishing tool integration (Zphisher, CamPhish)  
+  - Reverse shells (Python, Rust, PowerShell, Bash clients + listener)  
+  - Custom exploit setup with Metasploit  
+  - Albanian Hacking Tool integration  
+- **Utilities:**  
+  - Prank phone caller automation  
+  - Bulk cloning and installation of Redsimit tools  
+  - Support links for Redsimit’s Instagram, Discord, GitHub  
 
-    Phone Caller: Do not move the mouse — it uses screen coordinates to click and type on callmyphone.org.
+---
 
-    Zphisher/CamPhish: These tools will be cloned and executed inside the script.
+## Installation
 
-📚 Educational Purpose
+### Requirements
 
-This toolkit is built for:
+- Python 3.x  
+- `pip install` the following dependencies:
 
-    Practicing ethical hacking
+```bash
+pip install pyautogui colorama requests
 
-    Understanding tool automation with Python
+    For some tools (e.g., Sherlock, Zphisher), Linux environment is recommended.
 
-    Learning OSINT techniques
+    Git must be installed to clone repositories.
 
-    Simulating phishing environments (on your own devices)
+Usage
 
-    Gaining experience with reverse shells and port scanning
+    Clone this repository:
 
-🙌 Support Me
+git clone https://github.com/Simit6155/your-multi-tool.git
+cd your-multi-tool
 
-If you found this project helpful, support me by following:
+    Run the main Python script:
 
-    📸 Instagram: @Redsimit
+python3 multi_tool.py
 
-    💬 Discord Server
+    Use the interactive menu to select tools by entering the corresponding number or command.
 
-    💻 GitHub Profile
+    To exit, type q.
 
-    📦 My Other Projects
+Commands
+Command	Description
+1	Port Scanner (single & multi)
+2	IP Geolocator
+3	OSINT Tool (Sherlock)
+4	Phone Caller prank automation
+5	Spam Bot (automated message spam)
+6	Phishing Tool (Zphisher)
+7	Webcam Phishing Tool (CamPhish)
+8	Reverse Shell Setup
+9	Install Redsimit Multi-Tools
+10	Custom Exploit (Metasploit setup)
+11	Open Redsimit Discord Server
+12	Redsimit RedSploit (shell clients)
+99	Albanian Hacking Tool
+help	Show commands
+support	Open Redsimit social links
+q	Quit
+Contributing
 
-⚠️ Disclaimer
+Feel free to open issues or pull requests.
+Make sure to test your changes and keep the code style consistent.
+Disclaimer
 
-    I, the developer, am not responsible for any illegal use of this tool. This project is for educational and authorized penetration testing only. Always respect privacy and law.
+This tool is intended for educational and authorized penetration testing only.
+Unauthorized use or misuse can lead to legal consequences.
+The author is not responsible for any damage caused by misuse.
+Contact
 
-✅ License
+    Instagram: @Redsimit
 
-This project is licensed under the MIT License. Feel free to fork, improve, and share.
+    Discord: https://discord.gg/FyKAf9crA4
 
-btw im stopping uploading executables since github doesent let me since its getting larger
+    GitHub: Simit6155
