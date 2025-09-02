@@ -52,7 +52,7 @@ Usage
 
     Clone this repository:
 
-git clone https://github.com/Simit6155/your-multi-tool.git
+git clone https://github.com/Simit6155/Multi-Tool.git
 cd your-multi-tool
 
     Run the main Python script:
