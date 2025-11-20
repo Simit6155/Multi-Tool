@@ -1,99 +1,87 @@
-# Redsimit ReconFusion
+# 🔥 **RedSecutor**
+*A C# learning project focused on Windows Forms, process communication, and external module interaction.*
 
-![Redsimit Banner](https://raw.githubusercontent.com/Simit6155/Multi-Tool/main/Screenshot%202025-09-02%20145817.png)
-*Made by @Redsimit*
+<p align="center">
+  <img src="https://github.com/Simit6155/RedSecutor/blob/main/Redsecutor_Banner.png" width="85%">
+</p>
 
----
-
-## Overview
-
-Redsimit Multi-Tool is a modular Python-based toolkit designed for penetration testing, OSINT investigations, and security research.  
-It includes tools for port scanning, IP geolocation, phishing setup, reverse shell management, and more — all accessible through a simple CLI interface.
-
-> **Note:** This tool is for educational and authorized testing purposes only. Use responsibly and legally.
-
----
-
-## Features
-
-- **Networking:**  
-  - Single and Multi-port scanner  
-  - IP Geolocator via `ipapi.co`  
-- **OSINT Tools:**  
-  - Sherlock username lookup  
-- **Attack Tools:**  
-  - Spam bot (automated typing spamming messages)  
-  - Phishing tool integration (Zphisher, CamPhish)  
-  - Reverse shells (Python, Rust, PowerShell, Bash clients + listener)  
-  - Custom exploit setup with Metasploit  
-  - Albanian Hacking Tool integration  
-- **Utilities:**  
-  - Prank phone caller automation  
-  - Bulk cloning and installation of Redsimit tools  
-  - Support links for Redsimit’s Instagram, Discord, GitHub  
+<p align="center">
+  <a href="https://github.com/Simit6155/RedSecutor/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/Simit6155/RedSecutor/dotnet.yml?style=for-the-badge" alt="Build Status">
+  </a>
+  <a href="https://github.com/Simit6155/RedSecutor/issues">
+    <img src="https://img.shields.io/github/issues/Simit6155/RedSecutor?style=for-the-badge" alt="Issues">
+  </a>
+  <a href="https://github.com/Simit6155/RedSecutor/stargazers">
+    <img src="https://img.shields.io/github/stars/Simit6155/RedSecutor?style=for-the-badge" alt="Stars">
+  </a>
+  <a href="https://github.com/Simit6155/RedSecutor/network/members">
+    <img src="https://img.shields.io/github/forks/Simit6155/RedSecutor?style=for-the-badge" alt="Forks">
+  </a>
+</p>
 
 ---
 
-## Installation
+## 📌 **About**
+RedSecutor is an **educational project** created to explore:
 
-### Requirements
+- 🎨 Windows Forms UI development  
+- 🔗 Interfacing with external native DLLs  
+- 📦 JSON handling  
 
-- Python 3.x  
-- `pip install` the following dependencies:
+> This repository **does not contain** any DLLs, exploits, or reverse‑engineered files.  
+> All native modules are **user‑provided** and not included for safety, legality, and GitHub policy compliance.
 
-```bash
-pip install pyautogui colorama requests
+---
 
-    For some tools (e.g., Sherlock, Zphisher), Linux environment is recommended.
+## ⚙️ **Features**
+- 🖥️ Custom WinForms interface  
+- 🧩 P/Invoke bindings for external modules  
+- 📜 Script execution routing  
+- 🧮 Minimal JSON parsing using `Newtonsoft.Json`  
+- 📁 Clean C# project structure  
 
-    Git must be installed to clone repositories.
+---
 
-Usage
+## 📁 **Important**
+This project is intended **ONLY for educational purposes**:
 
-    Clone this repository:
+🚫 No harmful functionality is included.
 
-git clone https://github.com/Simit6155/Multi-Tool.git
-cd your-multi-tool
+<details>
+  <summary>📌 **What this code does (won’t work because no DLLs)**</summary>
+  
+1. 💉 Inject  
+2. ✍️ Get the code you wrote  
+3. ▶️ Execute code  
 
-    Run the main Python script:
+Everything is visible via `/console`.
+</details>
 
-python3 multi_tool.py
+---
 
-    Use the interactive menu to select tools by entering the corresponding number or command.
+## 🚫 **Disclaimer**
+This project:
 
-    To exit, type q.
+- ❌ Does **not** include any DLLs, injectors, or binaries  
+- ❌ Does **not** bypass, exploit, or manipulate any game, service, or platform  
+- ❌ Must **not** be used for cheating, exploiting, or violating any terms of service  
 
-Commands
-Command	Description
-1	Port Scanner (single & multi)
-2	IP Geolocator
-3	OSINT Tool (Sherlock)
-4	Phone Caller prank automation
-5	Spam Bot (automated message spam)
-6	Phishing Tool (Zphisher)
-7	Webcam Phishing Tool (CamPhish)
-8	Reverse Shell Setup
-9	Install Redsimit Multi-Tools
-10	Custom Exploit (Metasploit setup)
-11	Open Redsimit Discord Server
-12	Redsimit RedSploit (shell clients)
-99	Albanian Hacking Tool
-help	Show commands
-support	Open Redsimit social links
-q	Quit
-Contributing
+You must provide your **own** external modules if you want to experiment further.
 
-Feel free to open issues or pull requests.
-Make sure to test your changes and keep the code style consistent.
-Disclaimer
+The author is **not responsible for misuse** of the code.
 
-This tool is intended for educational and authorized penetration testing only.
-Unauthorized use or misuse can lead to legal consequences.
-The author is not responsible for any damage caused by misuse.
-Contact
+---
 
-    Instagram: @Redsimit
+## 🛠️ **Build**
+Requirements:
 
-    Discord: https://discord.gg/FyKAf9crA4
+- 🧰 Visual Studio 2022  
+- 🕹️ .NET Framework 4.8  
+- 📦 Newtonsoft.Json  
 
-    GitHub: Simit6155
+Simply clone and build using:
+
+**Build → Build Solution**
+
+---
